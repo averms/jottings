@@ -1,0 +1,649 @@
+/* Color scheme inspired by [asciidoctor.css]
+(https://github.com/asciidoctor/asciidoctor-stylesheet-factory) */
+/* vars */
+$sans-font-stack: "Optima", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  "Roboto", "Helvetica Neue", "Ubuntu", "Oxygen", sans-serif;
+$serif-font-stack: Georgia, "Lucida", "URW Bookman L", sans-serif;
+$code-font-stack: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+  "Courier", "Courier New", monospace;
+$h1: 2.125em;
+$h2: 1.5em;
+$h3: 1.375em;
+$h4: 1.125em;
+$h5: 1.1em;
+$h6: 1em;
+$table-pad: 0.5625em 0.625em;
+
+/* Typography resets */
+
+
+/**
+* Prevent `sub` and `sup` elements from affecting the line height in
+* all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: white;
+  color: #222222;
+  padding: 0;
+  margin: 0;
+  font-family: $sans-font-stack;
+  cursor: auto;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+/* Center body text and make it nice and flexy */
+
+#body {
+  width: 100%;
+}
+
+#body-content {
+  max-width: 960px;
+  margin: auto;
+  padding-bottom: 5rem;
+}
+
+.col {
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Put toc on side */
+
+#TOC {
+  border-bottom: 3px double #ebebeb;
+  padding-bottom: 1.25em;
+  flex-shrink: 0;
+
+  > ul {
+    margin-left: 0.25rem;
+    font-size: 0.95em;
+
+    /* padding-left: 0rem; */
+  }
+
+  ul {
+    list-style-type: none;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  /* TODO: Make it a sidebar */
+
+  #TOC {
+    max-width: 20rem;
+    z-index: 1000;
+
+    /* top: 0; */
+    /* left: 0; */
+    overflow-x: hidden;
+    border-right: 1px solid #ebebeb;
+    border-bottom: 0 !important;
+    padding: 1em;
+    height: 100%;
+    overflow: auto;
+
+    ul ul {
+      margin-left: 0;
+      padding-left: 1.25rem;
+    }
+  }
+}
+
+a {
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    outline: none;
+  }
+}
+
+img,
+object,
+embed {
+  max-width: 100%;
+  height: auto;
+}
+
+object,
+embed {
+  height: 100%;
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+textarea {
+  height: auto;
+  min-height: 50px;
+}
+
+select {
+  width: 100%;
+}
+
+/* Default Link Styles */
+
+a {
+  color: #005498;
+  text-decoration: underline;
+  line-height: inherit;
+
+  &:hover,
+  &:focus {
+    color: #00467f;
+  }
+
+  img {
+    border: none;
+  }
+
+  > code {
+    color: #005498;
+  }
+}
+
+/* Default paragraph styles */
+
+p {
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+
+  aside {
+    font-size: 0.875em;
+    line-height: 1.35;
+    font-style: italic;
+  }
+
+  + p {
+    margin-top: 0.5em;
+  }
+}
+
+/* Default header styles */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $serif-font-stack;
+  font-weight: normal;
+  font-style: normal;
+  color: #ba3925;
+  text-rendering: optimizeLegibility;
+  margin-top: 1rem;
+  margin-bottom: 0.5em;
+  line-height: 1.2125em;
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  font-size: 60%;
+  color: #e99b8f;
+  line-height: 0;
+}
+
+h1 {
+  font-size: $h1;
+}
+
+h2 {
+  font-size: $h2;
+}
+
+h3 {
+  font-size: $h3;
+}
+
+h4 {
+  font-size: $h4;
+}
+h5 {
+  font-size: $h5;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+hr {
+  border: solid #dddddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 1.25em 0 1.1875em;
+  height: 0;
+}
+
+/* Helpful Typography Defaults */
+
+em,
+i {
+  font-style: italic;
+  line-height: inherit;
+}
+
+strong,
+b {
+  font-weight: bold;
+  line-height: inherit;
+}
+
+small {
+  font-size: 60%;
+  line-height: inherit;
+}
+
+/* Lists */
+
+ul,
+ol,
+dl {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 1.25em;
+  list-style-position: outside;
+  font-family: inherit;
+}
+
+ul,
+ol {
+  margin-left: 1.5em;
+}
+
+/* Unordered Lists */
+
+ul {
+  li {
+    ul,
+    ol {
+      margin-left: 1.25em;
+      margin-bottom: 0;
+      font-size: 1em;
+
+      /* Override nested font-size change */
+    }
+  }
+
+  &.square li ul,
+  &.circle li ul,
+  &.disc li ul {
+    list-style: inherit;
+  }
+
+  &.square {
+    list-style-type: square;
+  }
+
+  &.circle {
+    list-style-type: circle;
+  }
+
+  &.disc {
+    list-style-type: disc;
+  }
+
+  &.no-bullet {
+    list-style: none;
+  }
+}
+
+/* Ordered Lists */
+
+ol li {
+  ul,
+  ol {
+    margin-left: 1.25em;
+    margin-bottom: 0;
+  }
+}
+
+/* Definition Lists */
+
+dl {
+  dt {
+    margin-bottom: 0.3125em;
+    font-weight: bold;
+  }
+
+  dd {
+    margin-bottom: 1.25em;
+  }
+}
+
+/* Abbreviations */
+
+abbr,
+acronym {
+  text-transform: uppercase;
+  font-size: 90%;
+  color: #222222;
+  border-bottom: 1px dotted #dddddd;
+  cursor: help;
+}
+
+abbr {
+  text-transform: none;
+}
+
+/* Blockquotes */
+
+blockquote {
+  margin: 0 0 1.25em;
+  padding: 0.5625em 1.25em 0 1.1875em;
+  border-left: 1px solid #dddddd;
+
+  cite {
+    display: block;
+    font-size: inherit;
+    color: #555555;
+
+    &:before {
+      content: "\2014 \0020";
+    }
+
+    a {
+      color: #555555;
+
+      &:visited {
+        color: #555555;
+      }
+    }
+  }
+
+  line-height: 1.6;
+  color: #6f6f6f;
+
+  p {
+    line-height: 1.6;
+    color: #6f6f6f;
+  }
+}
+
+/* RESPONSIVE DESIGN */
+/* larger than mobile screens */
+@media only screen and (min-width: 768px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.4;
+  }
+
+  h1 {
+    font-size: $h1 * 1.2;
+  }
+  h2 {
+    font-size: $h2 * 1.2;
+  }
+  h3 {
+    font-size: $h3 * 1.2;
+  }
+  h4 {
+    font-size: $h4 * 1.2;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav#TOC {
+    display: none;
+  }
+
+  #body-content {
+    padding: 0 0.5rem;
+  }
+
+  /* table stuff */
+
+  thead {
+    display: none;
+  }
+
+  tr,
+  th {
+    display: block;
+  }
+
+  td {
+    display: block;
+    border-top: 0;
+  }
+
+  tr td:first-child {
+    font-weight: 700;
+  }
+}
+
+/* Print -- currently doesn't work that well */
+@media print {
+  * {
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr {
+    page-break-inside: avoid;
+  }
+
+  img {
+    page-break-inside: avoid;
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+
+  p,
+  h2,
+  h3,
+  .sidebarblock > .content > .title {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3,
+  .sidebarblock > .content > .title {
+    page-break-after: avoid;
+  }
+}
+
+/* Tables */
+
+table {
+  background: white;
+  margin-bottom: 1.25em;
+  border: solid 1px #dddddd;
+
+  thead,
+  tfoot {
+    background: #f4f4f4;
+    font-weight: bold;
+  }
+
+  thead th,
+  tfoot th {
+    font-weight: bold;
+  }
+
+  th,
+  td {
+    padding: $table-pad;
+    font-size: inherit;
+    display: table-cell;
+    line-height: 1.6;
+  }
+
+  tr {
+    &.even,
+    &.alt,
+    &:nth-of-type(even) {
+      background: #f9f9f9;
+    }
+  }
+
+  thead tr th,
+  tfoot tr th,
+  tbody tr td,
+  tr td,
+  tfoot tr td {
+  }
+}
+
+/* code blocks */
+
+code {
+  font-family: $code-font-stack;
+  font-weight: normal;
+  color: #6d180b;
+  font-size: 0.9em;
+}
+
+pre > code {
+  line-height: 1.4;
+  color: inherit;
+  font-weight: normal;
+  overflow-x: scroll;
+}
+
+/* Regular code spans */
+
+*:not(pre) > code {
+  font-size: 0.9375em;
+  padding: 0.1em 0.2em;
+  white-space: nowrap;
+  background-color: #f2f2f2;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  text-shadow: none;
+}
+
+a > code {
+  background-color: inherit;
+}
+
+footer {
+  max-width: 100%;
+  padding: 1.25em;
+  text-align: right;
+
+  * {
+    line-height: 1.44;
+  }
+}
+
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a {
+  color: #ba3925;
+  text-decoration: none;
+}
+
+ol {
+  margin-left: 1.75em;
+}
+
+ul li ol {
+  margin-left: 1.5em;
+}
+
+dl dd {
+  margin-left: 1.125em;
+
+  &:last-child {
+    margin-bottom: 0;
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+ol > li p {
+  margin-bottom: inherit;
+}
+
+ul {
+  > li p,
+  dd {
+    margin-bottom: inherit;
+  }
+}
+
+ol dd {
+  margin-bottom: inherit;
+}
+
+/* Footnotes */
+
+.footnote-ref {
+  sup {
+    font-size: 0.875em;
+  }
+
+  text-decoration: none;
+}
+
+.footnotes {
+  padding-bottom: 0.75rem;
+  font-size: 0.875em;
+
+  hr {
+    width: 20%;
+    min-width: 6.25em;
+    margin: -0.25em 0 0.75em 0;
+    border-width: 1px 0 0 0;
+  }
+}
