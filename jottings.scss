@@ -1,65 +1,33 @@
 /* Color scheme inspired by [asciidoctor.css]
 (https://github.com/asciidoctor/asciidoctor-stylesheet-factory) */
+
+@import "typography";
 /* vars */
 $sans-font-stack: "Optima", -apple-system, BlinkMacSystemFont, "Segoe UI",
   "Roboto", "Helvetica Neue", "Ubuntu", "Oxygen", sans-serif;
 $serif-font-stack: Georgia, "Lucida", "URW Bookman L", sans-serif;
 $code-font-stack: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
   "Courier", "Courier New", monospace;
-$h1: 2.125em;
-$h2: 1.5em;
-$h3: 1.375em;
-$h4: 1.125em;
-$h5: 1.1em;
-$h6: 1em;
-$table-pad: 0.5625em 0.625em;
-
-/* Typography resets */
-
-
-/**
-* Prevent `sub` and `sup` elements from affecting the line height in
-* all browsers.
-*/
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-html {
-  height: 100%;
-}
+$h1: 2.488rem;
+$h2: 2.074rem;
+$h3: 1.728rem;
+$h4: 1.44rem;
+$h5: 1.2rem;
+$h6: 1rem;
+$toc-width: 15rem;
+$table-pad: 0.5625rem 0.625rem;
+$border: #e5e5e5 !default;
 
 body {
-  background: white;
-  color: #222222;
-  padding: 0;
-  margin: 0;
+  background: #fafafa;
+  color: #111;
   font-family: $sans-font-stack;
   cursor: auto;
   -webkit-font-smoothing: antialiased;
-  height: 100%;
-  overflow: hidden;
-  display: flex;
+  min-height: 100%;
 }
 
-/* Center body text and make it nice and flexy */
-
-#body {
-  width: 100%;
-}
+/* Center body text and make it nice */
 
 #body-content {
   max-width: 960px;
@@ -70,48 +38,6 @@ body {
 .col {
   height: 100%;
   overflow-y: auto;
-}
-
-/* Put toc on side */
-
-#TOC {
-  border-bottom: 3px double #ebebeb;
-  padding-bottom: 1.25em;
-  flex-shrink: 0;
-
-  > ul {
-    margin-left: 0.25rem;
-    font-size: 0.95em;
-
-    /* padding-left: 0rem; */
-  }
-
-  ul {
-    list-style-type: none;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  /* TODO: Make it a sidebar */
-
-  #TOC {
-    max-width: 20rem;
-    z-index: 1000;
-
-    /* top: 0; */
-    /* left: 0; */
-    overflow-x: hidden;
-    border-right: 1px solid #ebebeb;
-    border-bottom: 0 !important;
-    padding: 1em;
-    height: 100%;
-    overflow: auto;
-
-    ul ul {
-      margin-left: 0;
-      padding-left: 1.25rem;
-    }
-  }
 }
 
 a {
@@ -152,7 +78,7 @@ select {
 /* Default Link Styles */
 
 a {
-  color: #005498;
+  color: inherit;
   text-decoration: underline;
   line-height: inherit;
 
@@ -166,7 +92,8 @@ a {
   }
 
   > code {
-    color: #005498;
+    color: inherit;
+    background-color: inherit;
   }
 }
 
@@ -175,23 +102,24 @@ a {
 p {
   font-family: inherit;
   font-weight: normal;
-  font-size: 1em;
-  line-height: 1.6;
+  font-size: 1rem;
+  // line-height: 1.6;
   text-rendering: optimizeLegibility;
 
   aside {
-    font-size: 0.875em;
+    font-size: 0.875rem;
     line-height: 1.35;
     font-style: italic;
   }
 
-  + p {
-    margin-top: 0.5em;
-  }
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Default header styles */
-
+.title {
+  color: #000;
+}
 h1,
 h2,
 h3,
@@ -203,9 +131,7 @@ h6 {
   font-style: normal;
   color: #ba3925;
   text-rendering: optimizeLegibility;
-  margin-top: 1rem;
-  margin-bottom: 0.5em;
-  line-height: 1.2125em;
+  margin: 0.5rem 0;
 }
 
 h1 small,
@@ -239,34 +165,14 @@ h5 {
 }
 
 h6 {
-  font-size: 1em;
+  font-size: $h6;
 }
 
 hr {
-  border: solid #dddddd;
-  border-width: 1px 0 0;
-  clear: both;
-  margin: 1.25em 0 1.1875em;
-  height: 0;
-}
-
-/* Helpful Typography Defaults */
-
-em,
-i {
-  font-style: italic;
-  line-height: inherit;
-}
-
-strong,
-b {
-  font-weight: bold;
-  line-height: inherit;
-}
-
-small {
-  font-size: 60%;
-  line-height: inherit;
+  background: $border;
+  border: none;
+  display: block;
+  height: 1px;
 }
 
 /* Lists */
@@ -274,16 +180,16 @@ small {
 ul,
 ol,
 dl {
-  font-size: 1em;
+  font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 1.25em;
+  margin-bottom: 1.25rem;
   list-style-position: outside;
   font-family: inherit;
 }
 
 ul,
 ol {
-  margin-left: 1.5em;
+  margin-left: 1.5rem;
 }
 
 /* Unordered Lists */
@@ -292,9 +198,9 @@ ul {
   li {
     ul,
     ol {
-      margin-left: 1.25em;
+      margin-left: 1.25rem;
       margin-bottom: 0;
-      font-size: 1em;
+      font-size: 1rem;
 
       /* Override nested font-size change */
     }
@@ -328,7 +234,7 @@ ul {
 ol li {
   ul,
   ol {
-    margin-left: 1.25em;
+    margin-left: 1.25rem;
     margin-bottom: 0;
   }
 }
@@ -337,13 +243,48 @@ ol li {
 
 dl {
   dt {
-    margin-bottom: 0.3125em;
+    margin-bottom: 0.3125rem;
     font-weight: bold;
   }
 
   dd {
-    margin-bottom: 1.25em;
+    margin-bottom: 1.25rem;
   }
+}
+
+ol {
+  margin-left: 1.75rem;
+}
+
+ul li ol {
+  margin-left: 1.5rem;
+}
+
+dl dd {
+  margin-left: 1.125rem;
+
+  &:last-child {
+    margin-bottom: 0;
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+ol > li p {
+  margin-bottom: inherit;
+}
+
+ul {
+  > li p,
+  dd {
+    margin-bottom: inherit;
+  }
+}
+
+ol dd {
+  margin-bottom: inherit;
 }
 
 /* Abbreviations */
@@ -364,8 +305,8 @@ abbr {
 /* Blockquotes */
 
 blockquote {
-  margin: 0 0 1.25em;
-  padding: 0.5625em 1.25em 0 1.1875em;
+  margin: 0.25rem 0;
+  padding: 0.3rem 1.25rem;
   border-left: 1px solid #dddddd;
 
   cite {
@@ -398,13 +339,32 @@ blockquote {
 /* RESPONSIVE DESIGN */
 /* larger than mobile screens */
 @media only screen and (min-width: 768px) {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    line-height: 1.4;
+  nav#TOC {
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    max-width: $toc-width;
+    text-align: left;
+    overflow: auto;
+
+    >ul {
+      list-style-type: none;
+      margin-left: 0.25rem;
+      ul {
+        margin-left: 0.6rem;
+      }
+    }
+
+  }
+
+  html {
+    font-size: 18px;
+  }
+
+  #body {
+    margin-left: $toc-width;
   }
 
   h1 {
@@ -418,6 +378,9 @@ blockquote {
   }
   h4 {
     font-size: $h4 * 1.2;
+  }
+  h5 {
+    font-size: $h5 * 1.2;
   }
 }
 
@@ -501,7 +464,7 @@ blockquote {
 
 table {
   background: white;
-  margin-bottom: 1.25em;
+  margin: 0.75rem auto;
   border: solid 1px #dddddd;
 
   thead,
@@ -530,13 +493,6 @@ table {
       background: #f9f9f9;
     }
   }
-
-  thead tr th,
-  tfoot tr th,
-  tbody tr td,
-  tr td,
-  tfoot tr td {
-  }
 }
 
 /* code blocks */
@@ -549,7 +505,6 @@ code {
 }
 
 pre > code {
-  line-height: 1.4;
   color: inherit;
   font-weight: normal;
   overflow-x: scroll;
@@ -558,8 +513,8 @@ pre > code {
 /* Regular code spans */
 
 *:not(pre) > code {
-  font-size: 0.9375em;
-  padding: 0.1em 0.2em;
+  font-size: 0.9em;
+  padding: 0.1rem 0.25rem;
   white-space: nowrap;
   background-color: #f2f2f2;
   -webkit-border-radius: 4px;
@@ -567,13 +522,9 @@ pre > code {
   text-shadow: none;
 }
 
-a > code {
-  background-color: inherit;
-}
-
 footer {
   max-width: 100%;
-  padding: 1.25em;
+  padding: 1.25rem;
   text-align: right;
 
   * {
@@ -591,46 +542,11 @@ h6 > a {
   text-decoration: none;
 }
 
-ol {
-  margin-left: 1.75em;
-}
-
-ul li ol {
-  margin-left: 1.5em;
-}
-
-dl dd {
-  margin-left: 1.125em;
-
-  &:last-child {
-    margin-bottom: 0;
-
-    > :last-child {
-      margin-bottom: 0;
-    }
-  }
-}
-
-ol > li p {
-  margin-bottom: inherit;
-}
-
-ul {
-  > li p,
-  dd {
-    margin-bottom: inherit;
-  }
-}
-
-ol dd {
-  margin-bottom: inherit;
-}
-
 /* Footnotes */
 
 .footnote-ref {
   sup {
-    font-size: 0.875em;
+    font-size: 0.875rem;
   }
 
   text-decoration: none;
@@ -638,12 +554,10 @@ ol dd {
 
 .footnotes {
   padding-bottom: 0.75rem;
-  font-size: 0.875em;
+  font-size: 0.875rem;
 
   hr {
     width: 20%;
-    min-width: 6.25em;
-    margin: -0.25em 0 0.75em 0;
-    border-width: 1px 0 0 0;
+    min-width: 6.25rem;
   }
 }

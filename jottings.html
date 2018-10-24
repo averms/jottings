@@ -13,19 +13,6 @@ $if(date-meta)$
 $endif$
 <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
 
-<!-- styles -->
-<style>
-.author {
-margin-bottom: 0;
-padding-bottom: 0
-}
-.published,
-.license {
-font-size: 89%;
-margin-bottom: .75em
-}
-</style>
-
 $if(quotes)$
 <style>
 q {
@@ -39,9 +26,7 @@ $if(highlighting-css)$
 $highlighting-css$
 </style>
 $endif$
-
 <link rel="stylesheet" href="/Users/a3/dv/jottings/dist/jottings.css">
-
 $for(css)$
 <link rel="stylesheet" href="$css$">
 $endfor$
@@ -61,42 +46,25 @@ $for(include-before)$
 $include-before$
 $endfor$
 
-$if(published)$
-<div class="published">$published$</div>
-$endif$
-
-$if(subtitle)$
-<header>
-<h1 class="title">$title$</h1>
-<h1 class="subtitle">$subtitle$</h1>
-
-$if(author)$
-$for(author)$
-<h2 class="author">$author$</h2>
-$endfor$
-$endif$
-
-$if(version)$
-<h3 class="version">Version $version$</h3>
-$endif$
-$if(date)$
-<h3 class="date">$date$</h3>
-$endif$
-</header>
-$endif$ <!-- Subtitle -->
 
 $if(toc)$
 <nav id="$idprefix$TOC" class="col">
-<h3 id="toctitle">Table of Contents</h3>
+<h5 id="$idprefix$toctitle">Table of Contents</h5>
 $toc$
 </nav>
 $endif$
-<div id="body" class="col">
+<article id="body">
 <section id="body-content">
+$if(title)$
+<h1 class="title">$title$</h1>
+$if(subtitle)$
+<h1 class="subtitle">$subtitle$</h1>
+$endif$
+$endif$ $--<!-- title -->
 $body$
 </section>
 <footer><a href="https://github.com/aaether32323">Jottings v0.1</a></footer>
-</div>
+</article>
 $for(include-after)$
 $include-after$
 $endfor$

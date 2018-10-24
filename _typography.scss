@@ -1,4 +1,7 @@
-/*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */
+/*
+ * minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css
+ * edited
+*/
 // Blocks
 html,
 body,
@@ -53,6 +56,7 @@ textarea {
 
 // Box sizing
 html {
+  height: 100%;
   box-sizing: border-box;
 }
 
@@ -87,4 +91,21 @@ td,
 th {
   padding: 0;
   text-align: left;
+}
+
+em,
+i {
+  font-style: italic;
+  line-height: inherit;
+}
+
+strong,
+b {
+  font-weight: bold;
+  line-height: inherit;
+}
+
+small {
+  font-size: 60%;
+  line-height: inherit;
 }
