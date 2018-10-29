@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Color scheme inspired by [asciidoctor.css]
 (https://github.com/asciidoctor/asciidoctor-stylesheet-factory) */
 /*
@@ -28,7 +29,8 @@ h4,
 h5,
 h6 {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 h1,
 h2,
@@ -37,55 +39,67 @@ h4,
 h5,
 h6 {
   font-size: 100%;
-  font-weight: normal; }
+  font-weight: normal;
+}
 
 ul {
-  list-style: none; }
+  list-style: none;
+}
 
 button,
 input,
 select,
 textarea {
-  margin: 0; }
+  margin: 0;
+}
 
 html {
   height: 100%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 *, *::before, *::after {
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 img,
 audio,
 video {
   height: auto;
-  max-width: 100%; }
+  max-width: 100%;
+}
 
 iframe {
-  border: 0; }
+  border: 0;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 td,
 th {
   padding: 0;
-  text-align: left; }
+  text-align: left;
+}
 
 em,
 i {
   font-style: italic;
-  line-height: inherit; }
+  line-height: inherit;
+}
 
 strong,
 b {
   font-weight: bold;
-  line-height: inherit; }
+  line-height: inherit;
+}
 
 small {
   font-size: 60%;
-  line-height: inherit; }
+  line-height: inherit;
+}
 
 /* vars */
 body {
@@ -94,73 +108,90 @@ body {
   font-family: "Optima", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", "Ubuntu", "Oxygen", sans-serif;
   cursor: auto;
   -webkit-font-smoothing: antialiased;
-  min-height: 100%; }
+  min-height: 100%;
+}
 
 /* Center body text and make it nice */
 #body-content {
   max-width: 960px;
   margin: auto;
-  padding-bottom: 5rem; }
+  padding-bottom: 5rem;
+}
 
 .col {
   height: 100%;
-  overflow-y: auto; }
+  overflow-y: auto;
+}
 
 a:hover, a:focus {
   cursor: pointer;
-  outline: none; }
+  outline: none;
+}
 
 img,
 object,
 embed {
   max-width: 100%;
-  height: auto; }
+  height: auto;
+}
 
 object,
 embed {
-  height: 100%; }
+  height: 100%;
+}
 
 img {
   -ms-interpolation-mode: bicubic;
   display: inline-block;
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
 textarea {
   height: auto;
-  min-height: 50px; }
+  min-height: 50px;
+}
 
 select {
-  width: 100%; }
+  width: 100%;
+}
 
 /* Default Link Styles */
 a {
   color: inherit;
   text-decoration: underline;
-  line-height: inherit; }
-  a:hover, a:focus {
-    color: #00467f; }
-  a img {
-    border: none; }
-  a > code {
-    color: inherit;
-    background-color: inherit; }
+  line-height: inherit;
+}
+a:hover, a:focus {
+  color: #00467f;
+}
+a img {
+  border: none;
+}
+a > code {
+  color: inherit;
+  background-color: inherit;
+}
 
 /* Default paragraph styles */
 p {
   font-family: inherit;
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.7;
   text-rendering: optimizeLegibility;
   margin-top: 0.5rem;
-  margin-bottom: 0.5rem; }
-  p aside {
-    font-size: 0.875rem;
-    line-height: 1.35;
-    font-style: italic; }
+  margin-bottom: 0.5rem;
+}
+p aside {
+  font-size: 0.875rem;
+  line-height: 1.35;
+  font-style: italic;
+}
 
 /* Default header styles */
 .title {
-  color: #000; }
+  color: #000;
+}
 
 h1,
 h2,
@@ -173,7 +204,8 @@ h6 {
   font-style: normal;
   color: #ba3925;
   text-rendering: optimizeLegibility;
-  margin: 0.5rem 0; }
+  margin: 0.5rem 0;
+}
 
 h1 small,
 h2 small,
@@ -183,31 +215,39 @@ h5 small,
 h6 small {
   font-size: 60%;
   color: #e99b8f;
-  line-height: 0; }
+  line-height: 0;
+}
 
 h1 {
-  font-size: 2.488rem; }
+  font-size: 2.488rem;
+}
 
 h2 {
-  font-size: 2.074rem; }
+  font-size: 2.074rem;
+}
 
 h3 {
-  font-size: 1.728rem; }
+  font-size: 1.728rem;
+}
 
 h4 {
-  font-size: 1.44rem; }
+  font-size: 1.44rem;
+}
 
 h5 {
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+}
 
 h6 {
-  font-size: 1rem; }
+  font-size: 1rem;
+}
 
 hr {
   background: #e5e5e5;
   border: none;
   display: block;
-  height: 1px; }
+  height: 1px;
+}
 
 /* Lists */
 ul,
@@ -217,11 +257,13 @@ dl {
   line-height: 1.6;
   margin-bottom: 1.25rem;
   list-style-position: outside;
-  font-family: inherit; }
+  font-family: inherit;
+}
 
 ul,
 ol {
-  margin-left: 1.5rem; }
+  margin-left: 1.5rem;
+}
 
 /* Unordered Lists */
 ul li ul,
@@ -229,53 +271,70 @@ ul li ol {
   margin-left: 1.25rem;
   margin-bottom: 0;
   font-size: 1rem;
-  /* Override nested font-size change */ }
+  /* Override nested font-size change */
+}
 ul.square li ul, ul.circle li ul, ul.disc li ul {
-  list-style: inherit; }
+  list-style: inherit;
+}
 ul.square {
-  list-style-type: square; }
+  list-style-type: square;
+}
 ul.circle {
-  list-style-type: circle; }
+  list-style-type: circle;
+}
 ul.disc {
-  list-style-type: disc; }
+  list-style-type: disc;
+}
 ul.no-bullet {
-  list-style: none; }
+  list-style: none;
+}
 
 /* Ordered Lists */
 ol li ul,
 ol li ol {
   margin-left: 1.25rem;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 /* Definition Lists */
 dl dt {
   margin-bottom: 0.3125rem;
-  font-weight: bold; }
+  font-weight: bold;
+}
 dl dd {
-  margin-bottom: 1.25rem; }
+  margin-bottom: 1.25rem;
+}
 
 ol {
-  margin-left: 1.75rem; }
+  margin-left: 1.75rem;
+}
 
 ul li ol {
-  margin-left: 1.5rem; }
+  margin-left: 1.5rem;
+}
 
 dl dd {
-  margin-left: 1.125rem; }
-  dl dd:last-child {
-    margin-bottom: 0; }
-    dl dd:last-child > :last-child {
-      margin-bottom: 0; }
+  margin-left: 1.125rem;
+}
+dl dd:last-child {
+  margin-bottom: 0;
+}
+dl dd:last-child > :last-child {
+  margin-bottom: 0;
+}
 
 ol > li p {
-  margin-bottom: inherit; }
+  margin-bottom: inherit;
+}
 
 ul > li p,
 ul dd {
-  margin-bottom: inherit; }
+  margin-bottom: inherit;
+}
 
 ol dd {
-  margin-bottom: inherit; }
+  margin-bottom: inherit;
+}
 
 /* Abbreviations */
 abbr,
@@ -284,10 +343,12 @@ acronym {
   font-size: 90%;
   color: #222222;
   border-bottom: 1px dotted #dddddd;
-  cursor: help; }
+  cursor: help;
+}
 
 abbr {
-  text-transform: none; }
+  text-transform: none;
+}
 
 /* Blockquotes */
 blockquote {
@@ -295,20 +356,26 @@ blockquote {
   padding: 0.3rem 1.25rem;
   border-left: 1px solid #dddddd;
   line-height: 1.6;
-  color: #6f6f6f; }
-  blockquote cite {
-    display: block;
-    font-size: inherit;
-    color: #555555; }
-    blockquote cite:before {
-      content: "\2014 \0020"; }
-    blockquote cite a {
-      color: #555555; }
-      blockquote cite a:visited {
-        color: #555555; }
-  blockquote p {
-    line-height: 1.6;
-    color: #6f6f6f; }
+  color: #6f6f6f;
+}
+blockquote cite {
+  display: block;
+  font-size: inherit;
+  color: #555555;
+}
+blockquote cite:before {
+  content: "— ";
+}
+blockquote cite a {
+  color: #555555;
+}
+blockquote cite a:visited {
+  color: #555555;
+}
+blockquote p {
+  line-height: 1.6;
+  color: #6f6f6f;
+}
 
 /* RESPONSIVE DESIGN */
 /* larger than mobile screens */
@@ -319,123 +386,157 @@ blockquote {
     top: 0;
     left: 0;
     bottom: 0;
-    max-width: 15rem;
+    max-width: 10rem;
     text-align: left;
-    overflow: auto; }
-    nav#TOC > ul {
-      list-style-type: none;
-      margin-left: 0.25rem; }
-      nav#TOC > ul ul {
-        margin-left: 0.6rem; }
+    overflow: auto;
+  }
+  nav#TOC > ul {
+    list-style-type: none;
+    margin-left: 0.25rem;
+  }
+  nav#TOC > ul ul {
+    margin-left: 0.6rem;
+  }
 
   html {
-    font-size: 18px; }
+    font-size: 18px;
+  }
 
   #body {
-    margin-left: 15rem; }
+    margin-left: 10rem;
+  }
 
   h1 {
-    font-size: 2.9856rem; }
+    font-size: 2.9856rem;
+  }
 
   h2 {
-    font-size: 2.4888rem; }
+    font-size: 2.4888rem;
+  }
 
   h3 {
-    font-size: 2.0736rem; }
+    font-size: 2.0736rem;
+  }
 
   h4 {
-    font-size: 1.728rem; }
+    font-size: 1.728rem;
+  }
 
   h5 {
-    font-size: 1.44rem; } }
+    font-size: 1.44rem;
+  }
+}
 @media screen and (max-width: 768px) {
   nav#TOC {
-    display: none; }
+    display: none;
+  }
 
   #body-content {
-    padding: 0 0.5rem; }
+    padding: 0 0.5rem;
+  }
 
   /* table stuff */
   thead {
-    display: none; }
+    display: none;
+  }
 
   tr,
-  th {
-    display: block; }
+th {
+    display: block;
+  }
 
   td {
     display: block;
-    border-top: 0; }
+    border-top: 0;
+  }
 
   tr td:first-child {
-    font-weight: 700; } }
+    font-weight: 700;
+  }
+}
 /* Print -- currently doesn't work that well */
 @media print {
   * {
     background: transparent !important;
     box-shadow: none !important;
-    text-shadow: none !important; }
+    text-shadow: none !important;
+  }
 
   pre,
-  blockquote {
+blockquote {
     border: 1px solid #999;
-    page-break-inside: avoid; }
+    page-break-inside: avoid;
+  }
 
   thead {
-    display: table-header-group; }
+    display: table-header-group;
+  }
 
   tr {
-    page-break-inside: avoid; }
+    page-break-inside: avoid;
+  }
 
   img {
     page-break-inside: avoid;
-    max-width: 100% !important; }
+    max-width: 100% !important;
+  }
 
   @page {
-    margin: 0.5cm; }
+    margin: 0.5cm;
+  }
   p,
-  h2,
-  h3,
-  .sidebarblock > .content > .title {
+h2,
+h3,
+.sidebarblock > .content > .title {
     orphans: 3;
-    widows: 3; }
+    widows: 3;
+  }
 
   h2,
-  h3,
-  .sidebarblock > .content > .title {
-    page-break-after: avoid; } }
+h3,
+.sidebarblock > .content > .title {
+    page-break-after: avoid;
+  }
+}
 /* Tables */
 table {
   background: white;
   margin: 0.75rem auto;
-  border: solid 1px #dddddd; }
-  table thead,
-  table tfoot {
-    background: #f4f4f4;
-    font-weight: bold; }
-  table thead th,
-  table tfoot th {
-    font-weight: bold; }
-  table th,
-  table td {
-    padding: 0.5625rem 0.625rem;
-    font-size: inherit;
-    display: table-cell;
-    line-height: 1.6; }
-  table tr.even, table tr.alt, table tr:nth-of-type(even) {
-    background: #f9f9f9; }
+  border: solid 1px #dddddd;
+}
+table thead,
+table tfoot {
+  background: #f4f4f4;
+  font-weight: bold;
+}
+table thead th,
+table tfoot th {
+  font-weight: bold;
+}
+table th,
+table td {
+  padding: 0.5625rem 0.625rem;
+  font-size: inherit;
+  display: table-cell;
+  line-height: 1.6;
+}
+table tr.even, table tr.alt, table tr:nth-of-type(even) {
+  background: #f9f9f9;
+}
 
 /* code blocks */
 code {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier", "Courier New", monospace;
   font-weight: normal;
   color: #6d180b;
-  font-size: 0.9em; }
+  font-size: 0.9em;
+}
 
 pre > code {
   color: inherit;
   font-weight: normal;
-  overflow-x: scroll; }
+  overflow-x: scroll;
+}
 
 /* Regular code spans */
 *:not(pre) > code {
@@ -445,14 +546,17 @@ pre > code {
   background-color: #f2f2f2;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  text-shadow: none; }
+  text-shadow: none;
+}
 
 footer {
   max-width: 100%;
   padding: 1.25rem;
-  text-align: right; }
-  footer * {
-    line-height: 1.44; }
+  text-align: right;
+}
+footer * {
+  line-height: 1.44;
+}
 
 h1 > a,
 h2 > a,
@@ -461,19 +565,24 @@ h4 > a,
 h5 > a,
 h6 > a {
   color: #ba3925;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 /* Footnotes */
 .footnote-ref {
-  text-decoration: none; }
-  .footnote-ref sup {
-    font-size: 0.875rem; }
+  text-decoration: none;
+}
+.footnote-ref sup {
+  font-size: 0.875rem;
+}
 
 .footnotes {
   padding-bottom: 0.75rem;
-  font-size: 0.875rem; }
-  .footnotes hr {
-    width: 20%;
-    min-width: 6.25rem; }
+  font-size: 0.875rem;
+}
+.footnotes hr {
+  width: 20%;
+  min-width: 6.25rem;
+}
 
 /*# sourceMappingURL=jottings.css.map */

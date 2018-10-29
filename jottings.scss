@@ -14,7 +14,7 @@ $h3: 1.728rem;
 $h4: 1.44rem;
 $h5: 1.2rem;
 $h6: 1rem;
-$toc-width: 15rem;
+$toc-width: 10rem;
 $table-pad: 0.5625rem 0.625rem;
 $border: #e5e5e5 !default;
 
@@ -102,8 +102,8 @@ a {
 p {
   font-family: inherit;
   font-weight: normal;
-  font-size: 1rem;
-  // line-height: 1.6;
+  font-size: 1.2rem;
+  line-height: 1.7;
   text-rendering: optimizeLegibility;
 
   aside {
