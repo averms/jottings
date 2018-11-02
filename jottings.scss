@@ -64,6 +64,9 @@ $code-font-stack: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     &.sourceLine {
       border: none;
     }
+    code {
+      color: inherit;
+    }
   }
 
   abbr {
@@ -143,12 +146,14 @@ $code-font-stack: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
   h6 {
     font-family: $serif-font-stack;
     line-height: 1.2;
+    color: $red;
 
     &:first-child {
       margin-top: 0;
     }
-
-    color: $red;
+    code {
+      color: $red;
+    }
   }
 
   h1 {
@@ -268,9 +273,7 @@ $code-font-stack: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
   :not(pre) > code,
   kbd,
   samp {
-    border-radius: 3px;
     line-height: $line-height / 0.9;
-    padding: 0.1em 0.4em 0.2em;
     vertical-align: baseline;
   }
 
@@ -356,6 +359,9 @@ main {
   max-width: $toc-width;
   overflow: auto;
 
+  h6 {
+    margin-top: 0.6rem;
+  }
   > ul {
     list-style-type: none;
     margin-left: 0;

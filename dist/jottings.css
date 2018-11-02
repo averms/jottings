@@ -85,6 +85,9 @@ small {
 .styled a.sourceLine {
   border: none;
 }
+.styled a code {
+  color: inherit;
+}
 .styled abbr {
   border-bottom: 1px dotted;
   cursor: help;
@@ -160,6 +163,14 @@ small {
 .styled h5:first-child,
 .styled h6:first-child {
   margin-top: 0;
+}
+.styled h1 code,
+.styled h2 code,
+.styled h3 code,
+.styled h4 code,
+.styled h5 code,
+.styled h6 code {
+  color: #ba3925;
 }
 .styled h1 {
   font-size: 2.4em;
@@ -268,9 +279,7 @@ small {
 .styled :not(pre) > code,
 .styled kbd,
 .styled samp {
-  border-radius: 3px;
   line-height: 1.7777777778;
-  padding: 0.1em 0.4em 0.2em;
   vertical-align: baseline;
 }
 .styled pre {
@@ -344,6 +353,9 @@ main {
   max-width: 10rem;
   overflow: auto;
 }
+#TOC h6 {
+  margin-top: 0.6rem;
+}
 #TOC > ul {
   list-style-type: none;
   margin-left: 0;
@@ -413,6 +425,9 @@ img {
 
   @page {
     margin: 0.5cm;
+  }
+  main {
+    margin: 0;
   }
 }
 
