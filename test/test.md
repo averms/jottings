@@ -1,23 +1,14 @@
 ---
 title: example.md
-mainfont: Minion Pro
-mainfontoptions:
-  - Numbers=`{Proportional,OldStyle}`{=latex}
-  - Ligatures=Common
-sansfont: Myriad Pro
-monofont: Input
-minion-math: True
 ---
 
 <!-- markdownlint-disable -->
 
-## header test
-### yeet
-#### basefdfasf
-
 ## Other stuff
 ### Table
 #### mindoc
+##### Head 5
+###### Head 6
 
 The fourth level header in \LaTeX\ is interpreted as a paragraph heading.
 
@@ -47,7 +38,9 @@ text-to-HTML filters -- including
 [reStructuredText](http://docutils.sourceforge.net/rst.html),
 [Grutatext](http://www.triptico.com/software/grutatxt.html), and
 [EtText](http://ettext.taint.org/doc/) -- the single biggest source of inspiration for
-Markdown's syntax is the format of plain text email.
+Markdown's syntax is the format of plain text email[^1].
+
+[^1]: Here is a foot note my dueds
 
 ## Block Elements?
 
@@ -56,7 +49,7 @@ Markdown's syntax is the format of plain text email.
 A paragraph is simply one or more consecutive lines of text, separated
 by one or more blank lines. (A blank line is any line that looks like a
 blank line -- a line containing nothing but spaces or tabs is considered
-blank.) Normal paragraphs should not be indented with spaces or tabs.
+blank.) Normal paragraphs should not be indented with spaces or tabs[^2].
 
 The implication of the "one or more consecutive lines of text" rule is
 that Markdown supports "hard-wrapped" text paragraphs. This differs
@@ -66,6 +59,10 @@ character in a paragraph into a `<br />` tag.
 
 When you _do_ want to insert a `<br />` break tag using Markdown, you
 end a line with two or more spaces, then type return.
+
+[^2]: Another one my dudes. This time it is very longgg.
+      Yepp asdfdsaf jdksljf jklsdjlkf jsdlkfjklsd fjklsadj fklsadj fkldsfj ;a
+      sdfkl; jsaldk;fjskla;dfj asdklfj ksld;fjksal;fj
 
 ### Blockquotes
 
@@ -158,11 +155,18 @@ lazy:
   adipiscing elit.
 * Another item in the same list.
 
-Blockquotes within list items are not supported by \LaTeX\ output.
+Blockquotes within list items are not supported by \LaTeX~ output.
 
 * A list item with a blockquote:
+  
   > This is a blockquote
   > inside a list item.
+
+Here is a definition list.
+
+Term 1
+  ~ uno
+    ake
 
 ### Code Blocks
 
@@ -204,7 +208,7 @@ it's also easy to use Markdown to write about Markdown's own syntax.
 
 ### Math
 
-Inline is `$_$` and block is `$$_$$`. Pandoc will pass-through raw \LaTeX\ so you can also
+Inline is `$_$` and block is `$$_$$`. Pandoc will pass-through raw `\LaTeX\`{=latex} so you can also
 use typical `amsmath` constructs.
 
 \begin{align}
@@ -219,6 +223,9 @@ Equation environment (no numbering):
 = -\frac{\cos^3 x}{3} + \frac{\cos^5 x}{5} + C
 \end {equation*}
 
+Here is some math that will also work with html output:
+$$E=mc^2$$
+
 ## Span Elements
 
 ### Links
@@ -232,7 +239,7 @@ after the link text's closing square bracket. Inside the parentheses,
 put the URL where you want the link to point, along with an *optional*
 title for the link, surrounded in quotes. For example:
 
-This is [an example](http://example.com/) inline link.
+This is [an example](http://example.com/ "This is a link title for example-com") inline link.
 
 [This link](http://example.net/) has no title attribute.
 

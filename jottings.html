@@ -4,9 +4,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="generator" content="pandoc">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-$for(author-meta)$
-<meta name="author" content="$author-meta$">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+$for(author)$
+<meta name="author" content="$author$">
 $endfor$
 $if(date-meta)$
 <meta name="dcterms.date" content="$date-meta$">
@@ -39,37 +39,36 @@ $endfor$
 </head>
 
 <body>
-
 <!-- page content begins here -->
 
 $for(include-before)$
 $include-before$
 $endfor$
 
-
 $if(toc)$
-<nav id="$idprefix$TOC" class="col">
-<h5 id="$idprefix$toctitle">Table of Contents</h5>
+<nav id="$idprefix$TOC" class="styled">
+<h6 id="$idprefix$toctitle">Table of Contents</h6>
 $toc$
+<footer><a href="https://github.com/aaether32323/jottings">Made with Jottings v0.1</a></footer>
 </nav>
 $endif$
-<article id="body">
-<section id="body-content">
+
+<main>
+<article class="styled">
 $if(title)$
-<h1 class="title">$title$</h1>
+<h1 id="$idprefix$title">$title$</h1>
 $if(subtitle)$
-<h1 class="subtitle">$subtitle$</h1>
+<h2 id="$idprefix$subtitle">$subtitle$</h2>
 $endif$
-$endif$ $--<!-- title -->
+$endif$ $-- title
 $body$
-</section>
-<footer><a href="https://github.com/aaether32323">Jottings v0.1</a></footer>
 </article>
+</main>
+
 $for(include-after)$
 $include-after$
 $endfor$
 
 <!-- page content ends here -->
-
 </body>
 </html>

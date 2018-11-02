@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="generator" content="pandoc">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>example.md</title>
 
 
@@ -75,17 +75,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </head>
 
 <body>
-
 <!-- page content begins here -->
 
 
-
-<nav id="TOC" class="col">
-<h5 id="toctitle">Table of Contents</h5>
+<nav id="TOC" class="styled">
+<h6 id="toctitle">Table of Contents</h6>
 <ul>
-<li><a href="#header-test">header test</a><ul>
-<li><a href="#yeet">yeet</a></li>
-</ul></li>
 <li><a href="#other-stuff">Other stuff</a><ul>
 <li><a href="#table">Table</a></li>
 </ul></li>
@@ -105,27 +100,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="#code">Code</a></li>
 </ul></li>
 </ul>
+<footer><a href="https://github.com/aaether32323/jottings">Made with Jottings v0.1</a></footer>
 </nav>
-<article id="body">
-<section id="body-content">
-<h1 class="title">example.md</h1>
+
+<main>
+<article class="styled">
+<h1 id="title">example.md</h1>
  
 <!-- markdownlint-disable -->
-<section id="header-test" class="level2">
-<h2>header test</h2>
-<section id="yeet" class="level3">
-<h3>yeet</h3>
-<section id="basefdfasf" class="level4">
-<h4>basefdfasf</h4>
-</section>
-</section>
-</section>
-<section id="other-stuff" class="level2">
-<h2>Other stuff</h2>
-<section id="table" class="level3">
-<h3>Table</h3>
-<section id="mindoc" class="level4">
-<h4>mindoc</h4>
+<h2 id="other-stuff">Other stuff</h2>
+<h3 id="table">Table</h3>
+<h4 id="mindoc">mindoc</h4>
+<h5 id="head-5">Head 5</h5>
+<h6 id="head-6">Head 6</h6>
 <p>The fourth level header in  is interpreted as a paragraph heading.</p>
 <table>
 <thead>
@@ -162,27 +149,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tbody>
 </table>
 <hr />
-</section>
-</section>
-</section>
-<section id="overview" class="level2">
-<h2>Overview</h2>
-<section id="philosophy" class="level3">
-<h3>Philosophy</h3>
+<h2 id="overview">Overview</h2>
+<h3 id="philosophy">Philosophy</h3>
 <p>Markdown is intended to be as easy-to-read and easy-to-write as is feasible.</p>
-<p>Readability, however, is emphasized above all else. A Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions. While Markdown’s syntax has been influenced by several existing text-to-HTML filters – including <a href="http://docutils.sourceforge.net/mirror/setext.html">Setext</a>, <a href="http://www.aaronsw.com/2002/atx/">atx</a>, <a href="http://textism.com/tools/textile/">Textile</a>, <a href="http://docutils.sourceforge.net/rst.html">reStructuredText</a>, <a href="http://www.triptico.com/software/grutatxt.html">Grutatext</a>, and <a href="http://ettext.taint.org/doc/">EtText</a> – the single biggest source of inspiration for Markdown’s syntax is the format of plain text email.</p>
-</section>
-</section>
-<section id="block-elements" class="level2">
-<h2>Block Elements?</h2>
-<section id="paragraphs-and-line-breaks" class="level3">
-<h3>Paragraphs and Line Breaks</h3>
-<p>A paragraph is simply one or more consecutive lines of text, separated by one or more blank lines. (A blank line is any line that looks like a blank line – a line containing nothing but spaces or tabs is considered blank.) Normal paragraphs should not be indented with spaces or tabs.</p>
+<p>Readability, however, is emphasized above all else. A Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions. While Markdown’s syntax has been influenced by several existing text-to-HTML filters – including <a href="http://docutils.sourceforge.net/mirror/setext.html">Setext</a>, <a href="http://www.aaronsw.com/2002/atx/">atx</a>, <a href="http://textism.com/tools/textile/">Textile</a>, <a href="http://docutils.sourceforge.net/rst.html">reStructuredText</a>, <a href="http://www.triptico.com/software/grutatxt.html">Grutatext</a>, and <a href="http://ettext.taint.org/doc/">EtText</a> – the single biggest source of inspiration for Markdown’s syntax is the format of plain text email<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
+<h2 id="block-elements">Block Elements?</h2>
+<h3 id="paragraphs-and-line-breaks">Paragraphs and Line Breaks</h3>
+<p>A paragraph is simply one or more consecutive lines of text, separated by one or more blank lines. (A blank line is any line that looks like a blank line – a line containing nothing but spaces or tabs is considered blank.) Normal paragraphs should not be indented with spaces or tabs<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</p>
 <p>The implication of the “one or more consecutive lines of text” rule is that Markdown supports “hard-wrapped” text paragraphs. This differs significantly from most other text-to-HTML formatters (including Movable Type’s “Convert Line Breaks” option) which translate every line break character in a paragraph into a <code>&lt;br /&gt;</code> tag.</p>
 <p>When you <em>do</em> want to insert a <code>&lt;br /&gt;</code> break tag using Markdown, you end a line with two or more spaces, then type return.</p>
-</section>
-<section id="blockquotes" class="level3">
-<h3>Blockquotes</h3>
+<h3 id="blockquotes">Blockquotes</h3>
 <p>Markdown uses email-style <code>&gt;</code> characters for blockquoting. If you’re familiar with quoting passages of text in an email message, then you know how to create a blockquote in Markdown. It looks best if you hard wrap the text and put a <code>&gt;</code> before every line:</p>
 <blockquote>
 <p>This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</p>
@@ -207,9 +183,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><code>return shell_exec(&quot;echo $input | $markdown_script&quot;);</code></p>
 </blockquote>
 <p>Any decent text editor should make email-style quoting easy. For example, with BBEdit, you can make a selection and choose Increase Quote Level from the Text menu.</p>
-</section>
-<section id="lists" class="level3">
-<h3>Lists</h3>
+<h3 id="lists">Lists</h3>
 <p>Markdown supports ordered (numbered) and unordered (bulleted) lists.</p>
 <p>Unordered lists use asterisks, pluses, and hyphens – interchangably – as list markers:</p>
 <ul>
@@ -241,13 +215,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>This is a list item with two paragraphs. This is the second paragraph in the list item. You’re only required to indent the first line. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
 <li>Another item in the same list.</li>
 </ul>
-<p>Blockquotes within list items are not supported by  output.</p>
+<p>Blockquotes within list items are not supported by ~ output.</p>
 <ul>
-<li>A list item with a blockquote: &gt; This is a blockquote &gt; inside a list item.</li>
+<li><p>A list item with a blockquote:</p>
+<blockquote>
+<p>This is a blockquote inside a list item.</p>
+</blockquote></li>
 </ul>
-</section>
-<section id="code-blocks" class="level3">
-<h3>Code Blocks</h3>
+<p>Here is a definition list.</p>
+<dl>
+<dt>Term 1</dt>
+<dd>uno ake
+</dd>
+</dl>
+<h3 id="code-blocks">Code Blocks</h3>
 <div class="sourceCode" id="cb1"><pre class="sourceCode haskell"><code class="sourceCode haskell"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="ot">&lt;-</span><span class="fu">&lt;</span> <span class="fu">&lt;&lt;-</span> <span class="ot">&lt;-</span><span class="fu">-</span> <span class="ot">&lt;-</span> <span class="ot">&lt;-</span><span class="fu">&gt;</span> <span class="ot">-&gt;</span> <span class="fu">--&gt;</span> <span class="ot">-&gt;</span><span class="fu">&gt;</span> <span class="fu">&gt;-&gt;</span></a>
 <a class="sourceLine" id="cb1-2" data-line-number="2"><span class="fu">&lt;=&lt;</span> <span class="fu">&lt;&lt;=</span> <span class="fu">&lt;==</span>    <span class="fu">&lt;=&gt;</span> <span class="ot">=&gt;</span> <span class="fu">==&gt;</span> <span class="ot">=&gt;</span><span class="fu">&gt;</span> <span class="fu">&gt;=&gt;</span></a>
 <a class="sourceLine" id="cb1-3" data-line-number="3">    <span class="fu">&gt;&gt;=</span> <span class="fu">&gt;&gt;-</span> <span class="fu">&gt;-</span> <span class="fu">&lt;~&gt;</span> <span class="fu">-&lt;</span> <span class="fu">-&lt;&lt;</span> <span class="fu">=&lt;&lt;</span></a>
@@ -263,43 +244,38 @@ end tell</code></pre>
 <div class="sourceCode" id="yee" data-nope="yeet" data-file="/Users/a3/dv/eacloggenerator/log_generator.py"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
 <p>A code block continues until it reaches a line that is not indented (or the end of the article).</p>
 <p>Regular Markdown syntax is not processed within code blocks. E.g., asterisks are just literal asterisks within a code block. This means it’s also easy to use Markdown to write about Markdown’s own syntax.</p>
-</section>
-<section id="math" class="level3">
-<h3>Math</h3>
-<p>Inline is <code>$_$</code> and block is <code>$$_$$</code>. Pandoc will pass-through raw  so you can also use typical <code>amsmath</code> constructs.</p>
+<h3 id="math">Math</h3>
+<p>Inline is <code>$_$</code> and block is <code>$$_$$</code>. Pandoc will pass-through raw  so you can also use typical <code>amsmath</code> constructs.</p>
 <p></p>
 <p>Equation environment (no numbering):</p>
 <p></p>
-</section>
-</section>
-<section id="span-elements" class="level2">
-<h2>Span Elements</h2>
-<section id="links" class="level3">
-<h3>Links</h3>
+<p>Here is some math that will also work with html output: <br /><span class="math display"><em>E</em> = <em>m</em><em>c</em><sup>2</sup></span><br /></p>
+<h2 id="span-elements">Span Elements</h2>
+<h3 id="links">Links</h3>
 <p>Markdown supports two style of links: <em>inline</em> and <em>reference</em>.</p>
 <p>In both styles, the link text is delimited by [square brackets].</p>
 <p>To create an inline link, use a set of regular parentheses immediately after the link text’s closing square bracket. Inside the parentheses, put the URL where you want the link to point, along with an <em>optional</em> title for the link, surrounded in quotes. For example:</p>
-<p>This is <a href="http://example.com/">an example</a> inline link.</p>
+<p>This is <a href="http://example.com/" title="This is a link title for example-com">an example</a> inline link.</p>
 <p><a href="http://example.net/">This link</a> has no title attribute.</p>
-</section>
-<section id="emphasis" class="level3">
-<h3>Emphasis</h3>
+<h3 id="emphasis">Emphasis</h3>
 <p>Markdown treats asterisks (<code>*</code>) and underscores (<code>_</code>) as indicators of emphasis. Text wrapped with one <code>*</code> or <code>_</code> will be wrapped with an HTML <code>&lt;em&gt;</code> tag; double <code>*</code>’s or <code>_</code>’s will be wrapped with an HTML <code>&lt;strong&gt;</code> tag. E.g., this input:</p>
 <p><em>single asterisks</em></p>
 <p><em>single underscores</em></p>
 <p><strong>double asterisks</strong></p>
 <p><strong>double underscores</strong></p>
-</section>
-<section id="code" class="level3">
-<h3>Code</h3>
+<h3 id="code">Code</h3>
 <p>To indicate a span of code, wrap it with backtick quotes (<code>`</code>). Unlike a pre-formatted code block, a code span indicates code within a normal paragraph. For example:</p>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Here is a foot note my dueds<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>Another one my dudes. This time it is very longgg. Yepp asdfdsaf jdksljf jklsdjlkf jsdlkfjklsd fjklsadj fklsadj fkldsfj ;a sdfkl; jsaldk;fjskla;dfj asdklfj ksld;fjksal;fj<a href="#fnref2" class="footnote-back">↩</a></p></li>
+</ol>
 </section>
-</section>
-</section>
-<footer><a href="https://github.com/aaether32323">Jottings v0.1</a></footer>
 </article>
+</main>
+
 
 <!-- page content ends here -->
-
 </body>
 </html>
