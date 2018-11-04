@@ -1,5 +1,6 @@
 ---
 title: example.md
+mainfont: Times
 ---
 
 <!-- markdownlint-disable -->
@@ -58,7 +59,7 @@ Type's "Convert Line Breaks" option) which translate every line break
 character in a paragraph into a `<br />` tag.
 
 When you _do_ want to insert a `<br />` break tag using Markdown, you
-end a line with two or more spaces, then type return.
+end a line with a `\`.
 
 [^2]: Another one my dudes. This time it is very longgg.
       Yepp asdfdsaf jdksljf jklsdjlkf jsdlkfjklsd fjklsadj fklsadj fkldsfj ;a
@@ -155,7 +156,7 @@ lazy:
   adipiscing elit.
 * Another item in the same list.
 
-Blockquotes within list items are not supported by \LaTeX~ output.
+Blockquotes within list items are not supported by \LaTeX\ output.
 
 * A list item with a blockquote:
   

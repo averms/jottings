@@ -71,7 +71,7 @@ code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
-<link rel="stylesheet" href="/Users/a3/dv/jottings/dist/jottings.css">
+<link rel="stylesheet" href="{{jottings}}">
 </head>
 
 <body>
@@ -100,7 +100,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="#code">Code</a></li>
 </ul></li>
 </ul>
-<footer><a href="https://github.com/aaether32323/jottings">Made with Jottings v0.1</a></footer>
+<footer><a href="https://github.com/a-vrma/jottings">Made with Jottings v0.1</a></footer>
 </nav>
 
 <main>
@@ -157,7 +157,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3 id="paragraphs-and-line-breaks">Paragraphs and Line Breaks</h3>
 <p>A paragraph is simply one or more consecutive lines of text, separated by one or more blank lines. (A blank line is any line that looks like a blank line – a line containing nothing but spaces or tabs is considered blank.) Normal paragraphs should not be indented with spaces or tabs<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</p>
 <p>The implication of the “one or more consecutive lines of text” rule is that Markdown supports “hard-wrapped” text paragraphs. This differs significantly from most other text-to-HTML formatters (including Movable Type’s “Convert Line Breaks” option) which translate every line break character in a paragraph into a <code>&lt;br /&gt;</code> tag.</p>
-<p>When you <em>do</em> want to insert a <code>&lt;br /&gt;</code> break tag using Markdown, you end a line with two or more spaces, then type return.</p>
+<p>When you <em>do</em> want to insert a <code>&lt;br /&gt;</code> break tag using Markdown, you end a line with a <code>\</code>.</p>
 <h3 id="blockquotes">Blockquotes</h3>
 <p>Markdown uses email-style <code>&gt;</code> characters for blockquoting. If you’re familiar with quoting passages of text in an email message, then you know how to create a blockquote in Markdown. It looks best if you hard wrap the text and put a <code>&gt;</code> before every line:</p>
 <blockquote>
@@ -215,7 +215,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>This is a list item with two paragraphs. This is the second paragraph in the list item. You’re only required to indent the first line. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
 <li>Another item in the same list.</li>
 </ul>
-<p>Blockquotes within list items are not supported by ~ output.</p>
+<p>Blockquotes within list items are not supported by  output.</p>
 <ul>
 <li><p>A list item with a blockquote:</p>
 <blockquote>

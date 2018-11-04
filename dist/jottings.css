@@ -125,6 +125,9 @@ small {
 .styled sup {
   vertical-align: super;
 }
+.styled span.smallcaps {
+  font-variant: small-caps;
+}
 .styled p,
 .styled dl,
 .styled ol,
@@ -274,7 +277,7 @@ small {
   -webkit-font-smoothing: auto;
   color: #111;
   font-size: 0.9em;
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-family: SFMono-Regular, Monaco, Menlo, Consolas, "Liberation Mono", monospace;
 }
 .styled :not(pre) > code,
 .styled kbd,
