@@ -11,8 +11,6 @@ mainfont: Times
 ##### Head 5
 ###### Head 6
 
-The fourth level header in \LaTeX\ is interpreted as a paragraph heading.
-
 | Template variable | Value appears in:                                  |
 |-------------------|----------------------------------------------------|
 | `description`     | Content of HTML tag `meta name="description"`      |
@@ -62,8 +60,8 @@ When you _do_ want to insert a `<br />` break tag using Markdown, you
 end a line with a `\`.
 
 [^2]: Another one my dudes. This time it is very longgg.
-      Yepp asdfdsaf jdksljf jklsdjlkf jsdlkfjklsd fjklsadj fklsadj fkldsfj ;a
-      sdfkl; jsaldk;fjskla;dfj asdklfj ksld;fjksal;fj
+      Yepp. So long, pop! I'm off to check my tiger trap! I rigged a tuna fish
+      sandwich yesterday, so I'm sure to have a tiger by now!
 
 ### Blockquotes
 
@@ -156,7 +154,7 @@ lazy:
   adipiscing elit.
 * Another item in the same list.
 
-Blockquotes within list items are not supported by \LaTeX\ output.
+Blockquotes within list items are not supported by output.
 
 * A list item with a blockquote:
   
@@ -209,7 +207,7 @@ it's also easy to use Markdown to write about Markdown's own syntax.
 
 ### Math
 
-Inline is `$_$` and block is `$$_$$`. Pandoc will pass-through raw `\LaTeX\`{=latex} so you can also
+Inline is `$_$` and block is `$$_$$`. Pandoc will pass-through raw so you can also
 use typical `amsmath` constructs.
 
 \begin{align}
@@ -261,6 +259,6 @@ __double underscores__
 
 ### Code
 
-To indicate a span of code, wrap it with backtick quotes (`` ` ``).
+To indicate a span of code, wrap it with backtick quotes (\`).
 Unlike a pre-formatted code block, a code span indicates code within a
 normal paragraph. For example:

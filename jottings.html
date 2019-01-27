@@ -2,36 +2,38 @@
 <html lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
 
 <head>
-<meta charset="utf-8">
-<meta name="generator" content="pandoc">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-$for(author)$
-<meta name="author" content="$author$">
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+$for(author-meta)$
+  <meta name="author" content="$author$">
 $endfor$
 $if(date-meta)$
-<meta name="dcterms.date" content="$date-meta$">
+  <meta name="dcterms.date" content="$date-meta$">
 $endif$
-<title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
-
+$if(keywords)$
+  <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
+$endif$
+  <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
 $if(quotes)$
-<style>
-q {
-quotes: "“" "”" "‘" "’";
-}
-</style>
+  <style>
+  q {
+  quotes: "“" "”" "‘" "’";
+  }
+  </style>
 $endif$
 
 $if(highlighting-css)$
-<style>
-$highlighting-css$
-</style>
+  <style>
+  $highlighting-css$
+  </style>
 $endif$
-<link rel="stylesheet" href="{{jottings}}">
+  <link rel="stylesheet" href="{{jottings}}">
 $for(css)$
-<link rel="stylesheet" href="$css$">
+  <link rel="stylesheet" href="$css$">
 $endfor$
 $if(math)$
-$math$
+  $math$
 $endif$
 $for(header-includes)$
 $header-includes$

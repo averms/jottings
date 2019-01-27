@@ -2,76 +2,75 @@
 <html lang="">
 
 <head>
-<meta charset="utf-8">
-<meta name="generator" content="pandoc">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>example.md</title>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>example.md</title>
 
-
-<style>
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
+  <style>
+  a.sourceLine { display: inline-block; line-height: 1.25; }
+  a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+  a.sourceLine:empty { height: 1.2em; }
+  .sourceCode { overflow: visible; }
+  code.sourceCode { white-space: pre; position: relative; }
+  div.sourceCode { margin: 1em 0; }
+  pre.sourceCode { margin: 0; }
+  @media screen {
+  div.sourceCode { overflow: auto; }
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
-<link rel="stylesheet" href="{{jottings}}">
+  @media print {
+  code.sourceCode { white-space: pre-wrap; }
+  a.sourceLine { text-indent: -1em; padding-left: 1em; }
+  }
+  pre.numberSource a.sourceLine
+    { position: relative; left: -4em; }
+  pre.numberSource a.sourceLine::before
+    { content: attr(title);
+      position: relative; left: -1em; text-align: right; vertical-align: baseline;
+      border: none; pointer-events: all; display: inline-block;
+      -webkit-touch-callout: none; -webkit-user-select: none;
+      -khtml-user-select: none; -moz-user-select: none;
+      -ms-user-select: none; user-select: none;
+      padding: 0 4px; width: 4em;
+      color: #aaaaaa;
+    }
+  pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+  div.sourceCode
+    {  }
+  @media screen {
+  a.sourceLine::before { text-decoration: underline; }
+  }
+  code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+  code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+  code span.at { color: #7d9029; } /* Attribute */
+  code span.bn { color: #40a070; } /* BaseN */
+  code span.bu { } /* BuiltIn */
+  code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+  code span.ch { color: #4070a0; } /* Char */
+  code span.cn { color: #880000; } /* Constant */
+  code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+  code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+  code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+  code span.dt { color: #902000; } /* DataType */
+  code span.dv { color: #40a070; } /* DecVal */
+  code span.er { color: #ff0000; font-weight: bold; } /* Error */
+  code span.ex { } /* Extension */
+  code span.fl { color: #40a070; } /* Float */
+  code span.fu { color: #06287e; } /* Function */
+  code span.im { } /* Import */
+  code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+  code span.op { color: #666666; } /* Operator */
+  code span.ot { color: #007020; } /* Other */
+  code span.pp { color: #bc7a00; } /* Preprocessor */
+  code span.sc { color: #4070a0; } /* SpecialChar */
+  code span.ss { color: #bb6688; } /* SpecialString */
+  code span.st { color: #4070a0; } /* String */
+  code span.va { color: #19177c; } /* Variable */
+  code span.vs { color: #4070a0; } /* VerbatimString */
+  code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="/Users/a3/dv/jottings/dist/jottings.css">
 </head>
 
 <body>
@@ -113,7 +112,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h4 id="mindoc">mindoc</h4>
 <h5 id="head-5">Head 5</h5>
 <h6 id="head-6">Head 6</h6>
-<p>The fourth level header in  is interpreted as a paragraph heading.</p>
 <table>
 <thead>
 <tr class="header">
@@ -124,7 +122,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td><code>description</code></td>
-<td>Content of HTML tag <code>meta name=&quot;description&quot;</code></td>
+<td>Content of HTML tag <code>meta name="description"</code></td>
 </tr>
 <tr class="even">
 <td><code>headnote</code></td>
@@ -180,7 +178,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>This is the second list item.</li>
 </ol>
 <p>Here’s some example code:</p>
-<p><code>return shell_exec(&quot;echo $input | $markdown_script&quot;);</code></p>
+<p><code>return shell_exec("echo $input | $markdown_script");</code></p>
 </blockquote>
 <p>Any decent text editor should make email-style quoting easy. For example, with BBEdit, you can make a selection and choose Increase Quote Level from the Text menu.</p>
 <h3 id="lists">Lists</h3>
@@ -215,7 +213,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>This is a list item with two paragraphs. This is the second paragraph in the list item. You’re only required to indent the first line. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
 <li>Another item in the same list.</li>
 </ul>
-<p>Blockquotes within list items are not supported by  output.</p>
+<p>Blockquotes within list items are not supported by output.</p>
 <ul>
 <li><p>A list item with a blockquote:</p>
 <blockquote>
@@ -229,10 +227,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </dd>
 </dl>
 <h3 id="code-blocks">Code Blocks</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode haskell"><code class="sourceCode haskell"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="ot">&lt;-</span><span class="fu">&lt;</span> <span class="fu">&lt;&lt;-</span> <span class="ot">&lt;-</span><span class="fu">-</span> <span class="ot">&lt;-</span> <span class="ot">&lt;-</span><span class="fu">&gt;</span> <span class="ot">-&gt;</span> <span class="fu">--&gt;</span> <span class="ot">-&gt;</span><span class="fu">&gt;</span> <span class="fu">&gt;-&gt;</span></a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="fu">&lt;=&lt;</span> <span class="fu">&lt;&lt;=</span> <span class="fu">&lt;==</span>    <span class="fu">&lt;=&gt;</span> <span class="ot">=&gt;</span> <span class="fu">==&gt;</span> <span class="ot">=&gt;</span><span class="fu">&gt;</span> <span class="fu">&gt;=&gt;</span></a>
-<a class="sourceLine" id="cb1-3" data-line-number="3">    <span class="fu">&gt;&gt;=</span> <span class="fu">&gt;&gt;-</span> <span class="fu">&gt;-</span> <span class="fu">&lt;~&gt;</span> <span class="fu">-&lt;</span> <span class="fu">-&lt;&lt;</span> <span class="fu">=&lt;&lt;</span></a>
-<a class="sourceLine" id="cb1-4" data-line-number="4">        <span class="fu">&lt;~~</span> <span class="fu">&lt;~</span> <span class="fu">~~</span> <span class="fu">~&gt;</span> <span class="fu">~~&gt;</span></a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode haskell"><code class="sourceCode haskell"><a class="sourceLine" id="cb1-1" title="1"><span class="ot">&lt;-</span><span class="fu">&lt;</span> <span class="fu">&lt;&lt;-</span> <span class="ot">&lt;-</span><span class="fu">-</span> <span class="ot">&lt;-</span> <span class="ot">&lt;-</span><span class="fu">&gt;</span> <span class="ot">-&gt;</span> <span class="fu">--&gt;</span> <span class="ot">-&gt;</span><span class="fu">&gt;</span> <span class="fu">&gt;-&gt;</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="fu">&lt;=&lt;</span> <span class="fu">&lt;&lt;=</span> <span class="fu">&lt;==</span>    <span class="fu">&lt;=&gt;</span> <span class="ot">=&gt;</span> <span class="fu">==&gt;</span> <span class="ot">=&gt;</span><span class="fu">&gt;</span> <span class="fu">&gt;=&gt;</span></a>
+<a class="sourceLine" id="cb1-3" title="3">    <span class="fu">&gt;&gt;=</span> <span class="fu">&gt;&gt;-</span> <span class="fu">&gt;-</span> <span class="fu">&lt;~&gt;</span> <span class="fu">-&lt;</span> <span class="fu">-&lt;&lt;</span> <span class="fu">=&lt;&lt;</span></a>
+<a class="sourceLine" id="cb1-4" title="4">        <span class="fu">&lt;~~</span> <span class="fu">&lt;~</span> <span class="fu">~~</span> <span class="fu">~&gt;</span> <span class="fu">~~&gt;</span></a></code></pre></div>
 <p>Pre-formatted code blocks are used for writing about programming or markup source code. Rather than forming normal paragraphs, the lines of a code block are interpreted literally. Markdown wraps a code block in both <code>&lt;pre&gt;</code> and <code>&lt;code&gt;</code> tags.</p>
 <p>This is a normal paragraph:</p>
 <pre><code>This is a classless code block.</code></pre>
@@ -245,7 +243,7 @@ end tell</code></pre>
 <p>A code block continues until it reaches a line that is not indented (or the end of the article).</p>
 <p>Regular Markdown syntax is not processed within code blocks. E.g., asterisks are just literal asterisks within a code block. This means it’s also easy to use Markdown to write about Markdown’s own syntax.</p>
 <h3 id="math">Math</h3>
-<p>Inline is <code>$_$</code> and block is <code>$$_$$</code>. Pandoc will pass-through raw  so you can also use typical <code>amsmath</code> constructs.</p>
+<p>Inline is <code>$_$</code> and block is <code>$$_$$</code>. Pandoc will pass-through raw so you can also use typical <code>amsmath</code> constructs.</p>
 <p></p>
 <p>Equation environment (no numbering):</p>
 <p></p>
@@ -264,12 +262,12 @@ end tell</code></pre>
 <p><strong>double asterisks</strong></p>
 <p><strong>double underscores</strong></p>
 <h3 id="code">Code</h3>
-<p>To indicate a span of code, wrap it with backtick quotes (<code>`</code>). Unlike a pre-formatted code block, a code span indicates code within a normal paragraph. For example:</p>
+<p>To indicate a span of code, wrap it with backtick quotes (`). Unlike a pre-formatted code block, a code span indicates code within a normal paragraph. For example:</p>
 <section class="footnotes">
 <hr />
 <ol>
 <li id="fn1"><p>Here is a foot note my dueds<a href="#fnref1" class="footnote-back">↩</a></p></li>
-<li id="fn2"><p>Another one my dudes. This time it is very longgg. Yepp asdfdsaf jdksljf jklsdjlkf jsdlkfjklsd fjklsadj fklsadj fkldsfj ;a sdfkl; jsaldk;fjskla;dfj asdklfj ksld;fjksal;fj<a href="#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>Another one my dudes. This time it is very longgg. Yepp. So long, pop! I’m off to check my tiger trap! I rigged a tuna fish sandwich yesterday, so I’m sure to have a tiger by now!<a href="#fnref2" class="footnote-back">↩</a></p></li>
 </ol>
 </section>
 </article>

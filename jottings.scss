@@ -21,7 +21,7 @@ $toc-width: 10rem;
 $sans-font-stack: "Optima", -apple-system, BlinkMacSystemFont, "Segoe UI",
   "Roboto", "Helvetica Neue", "Ubuntu", "Oxygen", sans-serif;
 $serif-font-stack: Georgia, "Lucida", "URW Bookman L", sans-serif;
-$code-font-stack: SFMono-Regular, Monaco, Menlo, Consolas, "Liberation Mono",
+$code-font-stack: SFMono-Regular, Monaco, Consolas, "Liberation Mono",
   monospace;
 
 // Mixins
@@ -282,7 +282,7 @@ $code-font-stack: SFMono-Regular, Monaco, Menlo, Consolas, "Liberation Mono",
   }
 
   pre {
-    overflow: auto;
+    overflow-x: auto;
     padding: 1em 1.2em;
 
     code {
@@ -322,7 +322,7 @@ $code-font-stack: SFMono-Regular, Monaco, Menlo, Consolas, "Liberation Mono",
       padding: 0;
     }
   }
-  // no need to nest in table since they are unique elements.
+  // no need to nest in table since they shouldn't be found outside a table anyway.
   th,
   td {
     @include cell(1);
@@ -385,4 +385,5 @@ main {
     margin: 0 0.7rem;
   }
 }
+
 @import "_print";

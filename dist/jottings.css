@@ -1,437 +1,167 @@
-/*
- * Jottings
- * A css file for notes written in pandoc
- */
-/*
- * minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css
- * edited
-*/
-html,
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #fafafa;
-}
+/* Jottings A css file for notes written in pandoc */
+/* minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css edited */
+/* line 6, ../_reset.scss */ html, body { margin: 0; padding: 0; background-color: #fafafa; }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: 100%;
-  font-weight: normal;
-}
+/* line 14, ../_reset.scss */ h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
 
-html {
-  height: 100%;
-  box-sizing: border-box;
-}
+/* line 25, ../_reset.scss */ html { height: 100%; box-sizing: border-box; }
 
-*, *::before, *::after {
-  box-sizing: inherit;
-}
+/* line 31, ../_reset.scss */ *, *::before, *::after { box-sizing: inherit; }
 
-img,
-audio,
-video {
-  height: auto;
-  max-width: 100%;
-}
+/* line 39, ../_reset.scss */ img, audio, video { height: auto; max-width: 100%; }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
+/* line 47, ../_reset.scss */ table { border-collapse: collapse; border-spacing: 0; }
 
-td,
-th {
-  padding: 0;
-  text-align: left;
-}
+/* line 52, ../_reset.scss */ td, th { padding: 0; text-align: left; }
 
-em,
-i {
-  font-style: italic;
-  line-height: inherit;
-}
+/* line 58, ../_reset.scss */ em, i { font-style: italic; line-height: inherit; }
 
-strong,
-b {
-  font-weight: bold;
-  line-height: inherit;
-}
+/* line 64, ../_reset.scss */ strong, b { font-weight: bold; line-height: inherit; }
 
-small {
-  font-size: 60%;
-  line-height: inherit;
-}
+/* line 70, ../_reset.scss */ small { font-size: 60%; line-height: inherit; }
 
-.styled {
-  line-height: 1.6;
-  color: #111;
-  font-family: "Optima", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", "Ubuntu", "Oxygen", sans-serif;
-  max-width: 920px;
-  margin: auto;
-}
-.styled a {
-  text-decoration: none;
-  color: #3A4089;
-  border-bottom: 1px solid;
-}
-.styled a img {
-  border: none;
-}
-.styled a.sourceLine {
-  border: none;
-}
-.styled a code {
-  color: inherit;
-}
-.styled abbr {
-  border-bottom: 1px dotted;
-  cursor: help;
-}
-.styled cite {
-  font-style: italic;
-}
-.styled hr {
-  background: #e6e6e6;
-  border: none;
-  display: block;
-  height: 1px;
-  margin-bottom: 1.1rem;
-  margin-top: 1.1rem;
-}
-.styled img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.styled small {
-  font-size: 0.8em;
-}
-.styled strong {
-  font-weight: 700;
-  color: #000;
-}
-.styled sub,
-.styled sup {
-  font-size: 0.8em;
-}
-.styled sub {
-  vertical-align: sub;
-}
-.styled sup {
-  vertical-align: super;
-}
-.styled span.smallcaps {
-  font-variant: small-caps;
-}
-.styled p,
-.styled dl,
-.styled ol,
-.styled ul,
-.styled blockquote,
-.styled pre,
-.styled table {
-  margin-bottom: 1.1rem;
-}
-.styled p:last-child,
-.styled dl:last-child,
-.styled ol:last-child,
-.styled ul:last-child,
-.styled blockquote:last-child,
-.styled pre:last-child,
-.styled table:last-child {
-  margin-bottom: 0;
-}
-.styled p:empty {
-  display: none;
-}
-.styled h1,
-.styled h2,
-.styled h3,
-.styled h4,
-.styled h5,
-.styled h6 {
-  font-family: Georgia, "Lucida", "URW Bookman L", sans-serif;
-  line-height: 1.2;
-  color: #ba3925;
-}
-.styled h1:first-child,
-.styled h2:first-child,
-.styled h3:first-child,
-.styled h4:first-child,
-.styled h5:first-child,
-.styled h6:first-child {
-  margin-top: 0;
-}
-.styled h1 code,
-.styled h2 code,
-.styled h3 code,
-.styled h4 code,
-.styled h5 code,
-.styled h6 code {
-  color: #ba3925;
-}
-.styled h1 {
-  font-size: 2.4em;
-  margin-bottom: 0.4583333333rem;
-  margin-top: 0.9166666667rem;
-  line-height: 1;
-}
-.styled h2 {
-  font-size: 1.6em;
-  margin-bottom: 0.6875rem;
-  margin-top: 1.375rem;
-  line-height: 1.1;
-}
-.styled h3 {
-  font-size: 1.3em;
-  margin-bottom: 0.8461538462rem;
-  margin-top: 0.8461538462rem;
-}
-.styled h4 {
-  font-size: 1.2em;
-  margin-bottom: 0.9166666667rem;
-  margin-top: 0.9166666667rem;
-}
-.styled h5 {
-  font-size: 1.1em;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-}
-.styled h6 {
-  font-size: 1em;
-  margin-bottom: 1.1rem;
-  margin-top: 1.1rem;
-}
-.styled p + dl,
-.styled p + ol,
-.styled p + ul {
-  margin-top: -1.1rem;
-}
-.styled dt {
-  font-weight: 700;
-}
-.styled dd {
-  margin-left: 1.1rem;
-}
-.styled ol,
-.styled ul {
-  list-style-position: outside;
-  margin-left: initial;
-}
-.styled ol {
-  list-style-type: decimal;
-}
-.styled ol ol {
-  list-style-type: lower-alpha;
-}
-.styled ol ol ol {
-  list-style-type: lower-roman;
-}
-.styled ol ol ol ol {
-  list-style-type: lower-greek;
-}
-.styled ol ol ol ol ol {
-  list-style-type: decimal;
-}
-.styled ol ol ol ol ol ol {
-  list-style-type: lower-alpha;
-}
-.styled ul {
-  list-style-type: disc;
-}
-.styled ul ul {
-  list-style-type: circle;
-}
-.styled ul ul ul {
-  list-style-type: square;
-}
-.styled ul ul ul ul {
-  list-style-type: circle;
-}
-.styled ul ul ul ul ul {
-  list-style-type: disc;
-}
-.styled ul ul ul ul ul ul {
-  list-style-type: circle;
-}
-.styled blockquote {
-  border-left: 4px solid #e6e6e6;
-  margin-left: 1.1rem;
-  padding: 0.6em 0.8em;
-  color: #444;
-}
-.styled blockquote p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.styled code,
-.styled kbd,
-.styled samp,
-.styled pre {
-  -moz-osx-font-smoothing: auto;
-  -webkit-font-smoothing: auto;
-  color: #111;
-  font-size: 0.9em;
-  font-family: SFMono-Regular, Monaco, Menlo, Consolas, "Liberation Mono", monospace;
-}
-.styled :not(pre) > code,
-.styled kbd,
-.styled samp {
-  line-height: 1.7777777778;
-  vertical-align: baseline;
-}
-.styled pre {
-  overflow: auto;
-  padding: 1em 1.2em;
-}
-.styled pre code {
-  background: none;
-  font-size: 1em;
-  line-height: 1em;
-}
-.styled figure {
-  margin-bottom: 2.2rem;
-  text-align: center;
-}
-.styled figure:first-child {
-  margin-top: 0;
-}
-.styled figure:last-child {
-  margin-bottom: 0;
-}
-.styled figcaption {
-  font-size: 0.8em;
-  margin-top: 0.6875rem;
-  color: #444;
-}
-.styled table {
-  width: 100%;
-}
-.styled table pre {
-  white-space: pre-wrap;
-}
-.styled table code {
-  padding: 0;
-}
-.styled th,
-.styled td {
-  font-size: 1em;
-  padding: 0.55rem;
-  border: 1px solid #e6e6e6;
-  line-height: 1.4rem;
-}
-.styled thead tr,
-.styled tfoot tr {
-  background-color: #f5f5f5;
-}
-.styled thead th,
-.styled thead td,
-.styled tfoot th,
-.styled tfoot td {
-  font-size: 0.9em;
-  padding: 0.6111111111rem;
-  color: #111;
-  background-color: #f5f5f5;
-}
-.styled .footnote-ref {
-  border: none;
-}
+/* line 45, ../jottings.scss */ .styled { line-height: 1.6; color: #111; font-family: "Optima", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", "Ubuntu", "Oxygen", sans-serif; max-width: 920px; margin: auto; }
 
-main {
-  margin-left: 10rem;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-}
+/* line 54, ../jottings.scss */ .styled a { text-decoration: none; color: #3A4089; border-bottom: 1px solid; }
 
-#TOC {
-  padding: 1rem 0.7rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  max-width: 10rem;
-  overflow: auto;
-}
-#TOC h6 {
-  margin-top: 0.6rem;
-}
-#TOC > ul {
-  list-style-type: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-#TOC > ul ul {
-  list-style-type: none;
-  padding-left: 1rem;
-}
+/* line 59, ../jottings.scss */ .styled a img { border: none; }
 
-@media screen and (max-width: 768px) {
-  #TOC {
-    display: none;
-  }
+/* line 64, ../jottings.scss */ .styled a.sourceLine { border: none; }
 
-  main {
-    margin: 0 0.7rem;
-  }
-}
-/*
- * Greatly simplifies formatting while still looking okay.
- */
-@media print {
-  #TOC {
-    display: none;
-  }
+/* line 67, ../jottings.scss */ .styled a code { color: inherit; }
 
-  * {
-    background: transparent !important;
-    color: #000 !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
+/* line 72, ../jottings.scss */ .styled abbr { border-bottom: 1px dotted; cursor: help; }
 
-  a,
-a:visited {
-    text-decoration: underline;
-  }
+/* line 77, ../jottings.scss */ .styled cite { font-style: italic; }
 
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
+/* line 81, ../jottings.scss */ .styled hr { background: #e6e6e6; border: none; display: block; height: 1px; margin-bottom: 1.1rem; margin-top: 1.1rem; }
 
-  a:after,
-a[href^="javascript:"]:after,
-a[href^="#"]:after {
-    content: "";
-  }
+/* line 90, ../jottings.scss */ .styled img { display: block; margin-left: auto; margin-right: auto; }
 
-  pre,
-blockquote {
-    page-break-inside: avoid;
-  }
+/* line 96, ../jottings.scss */ .styled small { font-size: 0.8em; }
 
-  thead {
-    display: table-header-group;
-  }
+/* line 100, ../jottings.scss */ .styled strong { font-weight: 700; color: #000; }
 
-  tr,
-img {
-    page-break-inside: avoid;
-  }
+/* line 106, ../jottings.scss */ .styled sub, .styled sup { font-size: 0.8em; }
 
-  img {
-    max-width: 100% !important;
-  }
+/* line 111, ../jottings.scss */ .styled sub { vertical-align: sub; }
 
-  @page {
-    margin: 0.5cm;
-  }
-  main {
-    margin: 0;
-  }
-}
+/* line 115, ../jottings.scss */ .styled sup { vertical-align: super; }
 
-/*# sourceMappingURL=jottings.css.map */
+/* line 119, ../jottings.scss */ .styled span.smallcaps { font-variant: small-caps; }
+
+/* line 124, ../jottings.scss */ .styled p, .styled dl, .styled ol, .styled ul, .styled blockquote, .styled pre, .styled table { margin-bottom: 1.1rem; }
+
+/* line 133, ../jottings.scss */ .styled p:last-child, .styled dl:last-child, .styled ol:last-child, .styled ul:last-child, .styled blockquote:last-child, .styled pre:last-child, .styled table:last-child { margin-bottom: 0; }
+
+/* line 139, ../jottings.scss */ .styled p:empty { display: none; }
+
+/* line 145, ../jottings.scss */ .styled h1, .styled h2, .styled h3, .styled h4, .styled h5, .styled h6 { font-family: Georgia, "Lucida", "URW Bookman L", sans-serif; line-height: 1.2; color: #ba3925; }
+
+/* line 155, ../jottings.scss */ .styled h1:first-child, .styled h2:first-child, .styled h3:first-child, .styled h4:first-child, .styled h5:first-child, .styled h6:first-child { margin-top: 0; }
+
+/* line 158, ../jottings.scss */ .styled h1 code, .styled h2 code, .styled h3 code, .styled h4 code, .styled h5 code, .styled h6 code { color: #ba3925; }
+
+/* line 163, ../jottings.scss */ .styled h1 { font-size: 2.4em; margin-bottom: 0.45833rem; margin-top: 0.91667rem; line-height: 1; }
+
+/* line 169, ../jottings.scss */ .styled h2 { font-size: 1.6em; margin-bottom: 0.6875rem; margin-top: 1.375rem; line-height: 1.1; }
+
+/* line 175, ../jottings.scss */ .styled h3 { font-size: 1.3em; margin-bottom: 0.84615rem; margin-top: 0.84615rem; }
+
+/* line 179, ../jottings.scss */ .styled h4 { font-size: 1.2em; margin-bottom: 0.91667rem; margin-top: 0.91667rem; }
+
+/* line 183, ../jottings.scss */ .styled h5 { font-size: 1.1em; margin-bottom: 1rem; margin-top: 1rem; }
+
+/* line 187, ../jottings.scss */ .styled h6 { font-size: 1em; margin-bottom: 1.1rem; margin-top: 1.1rem; }
+
+/* line 193, ../jottings.scss */ .styled p + dl, .styled p + ol, .styled p + ul { margin-top: -1.1rem; }
+
+/* line 201, ../jottings.scss */ .styled dt { font-weight: 700; }
+
+/* line 204, ../jottings.scss */ .styled dd { margin-left: 1.1rem; }
+
+/* line 208, ../jottings.scss */ .styled ol, .styled ul { list-style-position: outside; margin-left: initial; }
+
+/* line 214, ../jottings.scss */ .styled ol { list-style-type: decimal; }
+
+/* line 216, ../jottings.scss */ .styled ol ol { list-style-type: lower-alpha; }
+
+/* line 218, ../jottings.scss */ .styled ol ol ol { list-style-type: lower-roman; }
+
+/* line 220, ../jottings.scss */ .styled ol ol ol ol { list-style-type: lower-greek; }
+
+/* line 222, ../jottings.scss */ .styled ol ol ol ol ol { list-style-type: decimal; }
+
+/* line 224, ../jottings.scss */ .styled ol ol ol ol ol ol { list-style-type: lower-alpha; }
+
+/* line 233, ../jottings.scss */ .styled ul { list-style-type: disc; }
+
+/* line 235, ../jottings.scss */ .styled ul ul { list-style-type: circle; }
+
+/* line 237, ../jottings.scss */ .styled ul ul ul { list-style-type: square; }
+
+/* line 239, ../jottings.scss */ .styled ul ul ul ul { list-style-type: circle; }
+
+/* line 241, ../jottings.scss */ .styled ul ul ul ul ul { list-style-type: disc; }
+
+/* line 243, ../jottings.scss */ .styled ul ul ul ul ul ul { list-style-type: circle; }
+
+/* line 253, ../jottings.scss */ .styled blockquote { border-left: 4px solid #e6e6e6; margin-left: 1.1rem; padding: 0.6em 0.8em; color: #444; }
+
+/* line 259, ../jottings.scss */ .styled blockquote p { margin-top: 0; margin-bottom: 0; }
+
+/* line 265, ../jottings.scss */ .styled code, .styled kbd, .styled samp, .styled pre { -moz-osx-font-smoothing: auto; -webkit-font-smoothing: auto; color: #111; font-size: 0.9em; font-family: SFMono-Regular, Monaco, Consolas, "Liberation Mono", monospace; }
+
+/* line 277, ../jottings.scss */ .styled :not(pre) > code, .styled kbd, .styled samp { line-height: 1.77778; vertical-align: baseline; }
+
+/* line 284, ../jottings.scss */ .styled pre { overflow-x: auto; padding: 1em 1.2em; }
+
+/* line 288, ../jottings.scss */ .styled pre code { background: none; font-size: 1em; line-height: 1em; }
+
+/* line 295, ../jottings.scss */ .styled figure { margin-bottom: 2.2rem; text-align: center; }
+
+/* line 299, ../jottings.scss */ .styled figure:first-child { margin-top: 0; }
+
+/* line 303, ../jottings.scss */ .styled figure:last-child { margin-bottom: 0; }
+
+/* line 308, ../jottings.scss */ .styled figcaption { font-size: 0.8em; margin-top: 0.6875rem; color: #444; }
+
+/* line 316, ../jottings.scss */ .styled table { width: 100%; }
+
+/* line 318, ../jottings.scss */ .styled table pre { white-space: pre-wrap; }
+
+/* line 321, ../jottings.scss */ .styled table code { padding: 0; }
+
+/* line 326, ../jottings.scss */ .styled th, .styled td { font-size: 1em; padding: 0.55rem; border: 1px solid #e6e6e6; line-height: 1.4rem; }
+
+/* line 336, ../jottings.scss */ .styled thead tr, .styled tfoot tr { background-color: #f5f5f5; }
+
+/* line 340, ../jottings.scss */ .styled thead th, .styled thead td, .styled tfoot th, .styled tfoot td { font-size: 0.9em; padding: 0.61111rem; color: #111; background-color: #f5f5f5; }
+
+/* line 347, ../jottings.scss */ .styled .footnote-ref { border: none; }
+
+/* line 352, ../jottings.scss */ main { margin-left: 10rem; padding-top: 1rem; padding-bottom: 2rem; }
+
+/* line 358, ../jottings.scss */ #TOC { padding: 1rem 0.7rem; position: fixed; top: 0; left: 0; max-width: 10rem; overflow: auto; }
+
+/* line 366, ../jottings.scss */ #TOC h6 { margin-top: 0.6rem; }
+
+/* line 369, ../jottings.scss */ #TOC > ul { list-style-type: none; margin-left: 0; padding-left: 0; }
+
+/* line 373, ../jottings.scss */ #TOC > ul ul { list-style-type: none; padding-left: 1rem; }
+
+@media screen and (max-width: 768px) { /* line 381, ../jottings.scss */ #TOC { display: none; }
+  /* line 384, ../jottings.scss */ main { margin: 0 0.7rem; } }
+
+/* Greatly simplifies formatting while still looking okay. All text becomes black. */
+@media print { /* line 7, ../_print.scss */ #TOC { display: none; }
+  /* line 10, ../_print.scss */ * { background: transparent !important; color: #000 !important; box-shadow: none !important; text-shadow: none !important; }
+  /* line 16, ../_print.scss */ a, a:visited { text-decoration: underline; }
+  /* line 20, ../_print.scss */ a[href]:after { content: " (" attr(href) ")"; }
+  /* line 23, ../_print.scss */ a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  /* line 28, ../_print.scss */ pre, blockquote { page-break-inside: avoid; }
+  /* line 33, ../_print.scss */ thead { display: table-header-group; }
+  /* line 36, ../_print.scss */ tr, img { page-break-inside: avoid; }
+  /* line 40, ../_print.scss */ img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  /* line 46, ../_print.scss */ main { margin: 0; } }
