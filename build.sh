@@ -9,3 +9,4 @@ sed 's|{{jottings}}|/Users/a3/dv/jottings/test/jottings.css|' ../jottings.html \
 sed 's|{{jottings}}|jottings.css|' ../jottings.html \
     > "jottings.temp"
 pandoc --template=jottings.temp --toc -o "test.html" "test.md"
+cp -R ./ ../docs
