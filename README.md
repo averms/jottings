@@ -14,10 +14,11 @@ Change `{{jottings}}` in `jottings.html` to the path of `jottings.css`. Here is 
 automated way to do that:
 
 ```shell
-curl "https://github.com/a-vrma/jottings/raw/master/dist/jottings.css" -Lo "$HOME/.pandoc/templates/jottings.css"
-curl "https://github.com/a-vrma/jottings/raw/master/jottings.html" -Lo "$HOME/.pandoc/templates/jottings.html"
-# requires gnu sed
-sed -i "s|{{jottings}}|$HOME/.pandoc/templates/jottings.css|" "$HOME/.pandoc/templates/jottings.html"
+curl -fL "https://github.com/a-vrma/jottings/raw/master/test/jottings.css" -o "$HOME/.pandoc/templates/jottings.css"
+
+curl -fL "https://github.com/a-vrma/jottings/raw/master/jottings.html" |
+  sed "s|{{jottings}}|$HOME/.pandoc/templates/jottings.css|" \
+  > "$HOME/.pandoc/templates/jottings.html"
 ```
 
 You can also copy the content of `jottings.css` to `jottings.html` inside a `style` element
