@@ -16,8 +16,7 @@ automated way to do that:
 curl -fL "https://github.com/a-vrma/jottings/raw/master/test/jottings.css" -o "$HOME/.pandoc/templates/jottings.css"
 
 curl -fL "https://github.com/a-vrma/jottings/raw/master/jottings.html" |
-  sed "s|{{jottings}}|$HOME/.pandoc/templates/jottings.css|" \
-  > "$HOME/.pandoc/templates/jottings.html"
+  sed "s|{{jottings}}|$HOME/.pandoc/templates/jottings.css|" > "$HOME/.pandoc/templates/jottings.html"
 ```
 
 You can also copy the content of `jottings.css` to `jottings.html` inside a `style` element
