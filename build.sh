@@ -2,7 +2,7 @@
 
 cd test || exit 1
 testdir="$(pwd)"
-sassc --style compact ../jottings.scss jottings.css
+sassc --style expanded ../jottings.scss | csso -o jottings.css
 
 # send to my data dir
 sed "s|{{jottings}}|${testdir}/jottings.css|" ../jottings.html \
