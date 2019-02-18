@@ -41,7 +41,6 @@ $endfor$
 </head>
 
 <body>
-<!-- page content begins here -->
 
 $for(include-before)$
 $include-before$
@@ -75,6 +74,5 @@ $for(include-after)$
 $include-after$
 $endfor$
 
-<!-- page content ends here -->
 </body>
 </html>
