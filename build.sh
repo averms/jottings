@@ -15,4 +15,5 @@ sed 's|{{jottings}}|jottings.css|' ../jottings.html \
     >jottings.temp
 
 pandoc --template jottings.temp --toc -o "test.html" "test.md"
-cp -R ./ ../docs
+cp test.html ../docs/index.html
+cp jottings.css ../docs/jottings.css
