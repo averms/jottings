@@ -22,4 +22,5 @@ if you want fully standalone files.
 
 ## License
 
-MIT/Expat. See LICENSE file for details.
+MIT/Expat. Includes [minireset.css](https://github.com/jgthms/minireset.css/)
+which is under the same license. See LICENSE file for details.
