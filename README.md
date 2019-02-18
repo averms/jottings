@@ -2,8 +2,6 @@
 
 > A theme for pandoc's html output
 
-![jottings example screenshot](https://user-images.githubusercontent.com/29077900/47932905-544d6e00-dea9-11e8-96a7-41fd880db4b2.png)
-
 [Demo page.](https://a-vrma.github.io/jottings/test.html)
 
 ## Usage
