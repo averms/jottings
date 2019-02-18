@@ -41,7 +41,6 @@ $endfor$
 </head>
 
 <body>
-<!-- page content begins here -->
 
 $for(include-before)$
 $include-before$
@@ -55,14 +54,18 @@ $toc$
 </nav>
 $endif$
 
+$if(toc)$
+<main style="margin-left: auto;">
+$else$
 <main>
+$endif$
 <article class="styled">
 $if(title)$
 <h1 id="$idprefix$title">$title$</h1>
 $if(subtitle)$
 <h2 id="$idprefix$subtitle">$subtitle$</h2>
 $endif$
-$endif$ $-- title
+$endif$
 $body$
 </article>
 </main>
@@ -71,6 +74,5 @@ $for(include-after)$
 $include-after$
 $endfor$
 
-<!-- page content ends here -->
 </body>
 </html>

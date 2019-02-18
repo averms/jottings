@@ -195,7 +195,7 @@ end tell
 
 Here is an include:
 
-```{.python nope=yeet file=/Users/a3/dv/eacloggenerator/log_generator.py #yee}
+```{.python nope=yeet file=../../log_generator/log_generator.py #yee}
 ```
 
 A code block continues until it reaches a line that is not indented
