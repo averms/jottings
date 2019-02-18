@@ -2,7 +2,7 @@
 
 > A theme for pandoc's html output
 
-[Demo page.](https://a-vrma.github.io/jottings/test.html)
+[Demo page.](https://a-vrma.github.io/jottings/)
 
 ## Usage
 
