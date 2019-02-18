@@ -1,7 +1,6 @@
 ---
 title: example.md
 lang: en
-dir: testingdir
 ---
 
 <!-- markdownlint-disable -->
