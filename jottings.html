@@ -1,5 +1,5 @@
-<!doctype HTML>
-<html lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
+<!doctype html>
+<html$if(lang)$ lang="$lang$"$endif$$if(dir)$ dir="$dir$"$endif$>
 
 <head>
   <meta charset="utf-8">
@@ -55,9 +55,9 @@ $toc$
 $endif$
 
 $if(toc)$
-<main style="margin-left: auto;">
-$else$
 <main>
+$else$
+<main style="margin-left: auto;">
 $endif$
 <article class="styled">
 $if(title)$

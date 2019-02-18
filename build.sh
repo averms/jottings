@@ -12,5 +12,5 @@ sed "s|{{jottings}}|${testdir}/jottings.css|" ../jottings.html \
 sed 's|{{jottings}}|jottings.css|' ../jottings.html \
     >jottings.temp
 
-pandoc --template=jottings.temp --toc -o "test.html" "test.md"
+pandoc --template jottings.temp --toc -o "test.html" "test.md"
 cp -R ./ ../docs

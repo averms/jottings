@@ -1,6 +1,7 @@
 ---
 title: example.md
-mainfont: Times
+lang: en
+dir: testingdir
 ---
 
 <!-- markdownlint-disable -->
