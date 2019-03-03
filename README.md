@@ -6,13 +6,13 @@
 
 ## Usage
 
-Put `jottings.html` in your pandoc data-dir and `jottings.css` wherever you like.
+Put `jottings.html` in your pandoc template directory and `jottings.css` wherever you like.
 Change `{{jottings}}` in `jottings.html` to the path of `jottings.css`. Here is a somewhat
 automated way to do that:
 
-```shell
+```sh
+mkdir -p ~/.pandoc/templates
 curl -fL "https://github.com/a-vrma/jottings/raw/master/test/jottings.css" -o "$HOME/.pandoc/templates/jottings.css"
-
 curl -fL "https://github.com/a-vrma/jottings/raw/master/jottings.html" |
   sed "s|{{jottings}}|$HOME/.pandoc/templates/jottings.css|" > "$HOME/.pandoc/templates/jottings.html"
 ```
