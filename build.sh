@@ -8,7 +8,7 @@ sassc --style expanded ../jottings.scss jottings.css
 
 # send to my data dir
 sed "s|{{jottings}}|${testdir}/jottings.css|" ../jottings.html \
-    >"$HOME/.pandoc/templates/jottings.html"
+    >"$HOME/.local/share/pandoc/templates/jottings.html"
 
 # send to test for testing
 sed 's|{{jottings}}|jottings.css|' ../jottings.html \
