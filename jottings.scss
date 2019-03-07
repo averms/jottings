@@ -249,8 +249,8 @@ $code-font-stack: SFMono-Regular, Monaco, Consolas, "Liberation Mono",
   // Blockquote
   blockquote {
     border-left: 4px solid $border;
-    margin-left: $margin;
-    padding: 0.6em 0.8em;
+    // left padding huge so that lists can fit.
+    padding: 0.6rem 0 0.6rem 1.6rem;
     color: $text-lighter;
 
     p {
@@ -280,12 +280,12 @@ $code-font-stack: SFMono-Regular, Monaco, Consolas, "Liberation Mono",
 
   pre {
     overflow-x: auto;
-    padding: 1em 1.2em;
+    padding: 1rem 1.2rem;
 
     code {
       background: none;
       font-size: 1em;
-      line-height: 1em;
+      line-height: 1rem;
     }
   }
   // Figure

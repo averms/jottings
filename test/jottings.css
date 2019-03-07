@@ -1,38 +1,12 @@
 /*! Jottings: a stylesheet for notes written in pandoc | MIT License */
 /*! minireset.css v0.0.4 | MIT License | github.com/jgthms/minireset.css */
-html,
-body,
-p,
-ol,
-ul,
-li,
-dl,
-dt,
-dd,
-blockquote,
-figure,
-fieldset,
-legend,
-textarea,
-pre,
-iframe,
-hr,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend,
+textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
   font-weight: normal;
 }
@@ -41,10 +15,7 @@ ul {
   list-style: none;
 }
 
-button,
-input,
-select,
-textarea {
+button, input, select, textarea {
   margin: 0;
 }
 
@@ -52,25 +23,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-img,
-embed,
-iframe,
-object,
-video {
+img, embed, iframe, object, video {
   height: auto;
   max-width: 100%;
-}
-
-audio {
-  max-width: 100%;
-}
-
-iframe {
-  border: 0;
 }
 
 table {
@@ -78,8 +33,7 @@ table {
   border-spacing: 0;
 }
 
-td,
-th {
+td, th {
   padding: 0;
   text-align: left;
 }
@@ -321,8 +275,7 @@ th {
 
 .styled blockquote {
   border-left: 4px solid #e6e6e6;
-  margin-left: 1.1rem;
-  padding: 0.6em 0.8em;
+  padding: 0.6rem 0 0.6rem 1.6rem;
   color: #444;
 }
 
@@ -351,13 +304,13 @@ th {
 
 .styled pre {
   overflow-x: auto;
-  padding: 1em 1.2em;
+  padding: 1rem 1.2rem;
 }
 
 .styled pre code {
   background: none;
   font-size: 1em;
-  line-height: 1em;
+  line-height: 1rem;
 }
 
 .styled figure {
