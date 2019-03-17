@@ -1,6 +1,7 @@
 #!/bin/sh
 
-cd test || exit 1
+set -e
+cd test
 testdir="$(pwd)"
 
 sassc --style expanded ../jottings.scss jottings.css
@@ -14,6 +15,6 @@ sed "s|{{jottings}}|${testdir}/jottings.css|" ../jottings.html \
 sed 's|{{jottings}}|jottings.css|' ../jottings.html \
     >jottings.temp
 
-pandoc --template jottings.temp --toc -o "test.html" "test.md"
+# pandoc --template jottings.temp --toc -o "test.html" "test.md"
 cp test.html ../docs/index.html
 cp jottings.css ../docs/jottings.css
