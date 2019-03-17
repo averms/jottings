@@ -21,7 +21,13 @@ curl -fL "https://github.com/a-vrma/jottings/raw/master/jottings.html" |
 You can also copy the content of `jottings.css` to `jottings.html` inside a `style` element
 if you want fully standalone files.
 
+## Features
+
+- System font stack.
+- Styling for every feature of pandoc's markdown.
+- Styles table of contents if used with `--toc`.
+
 ## License
 
-MIT/Expat. Includes [minireset.css](https://github.com/jgthms/minireset.css/)
+MIT/Expat. Includes [normalize.css](https://github.com/necolas/normalize.css)
 which is under the same license. See LICENSE file for details.

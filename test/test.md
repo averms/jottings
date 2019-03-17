@@ -3,13 +3,11 @@ title: example.md
 lang: en
 ---
 
-<!-- markdownlint-disable -->
-
-## Other stuff
-### Table
-#### mindoc
+## The Jottings Test File
+### Third levelu heading
+#### Fourth leeevel 4
 ##### Head 5
-###### Head 6
+###### Head 6 -- a table
 
 | Template variable | Value appears in:                                  |
 |:------------------|----------------------------------------------------|
@@ -105,8 +103,7 @@ Quote Level from the Text menu.
 
 Markdown supports ordered (numbered) and unordered (bulleted) lists.
 
-Unordered lists use asterisks, pluses, and hyphens -- interchangably
--- as list markers:
+Unordered lists use asterisks, pluses, and hyphens as markers.
 
 * Red
 * Green
@@ -200,12 +197,8 @@ Here is an include:
 ```{.python nope=yeet file=../../log_generator/log_generator.py #yee}
 ```
 
-A code block continues until it reaches a line that is not indented
-(or the end of the article).
-
-Regular Markdown syntax is not processed within code blocks. E.g.,
-asterisks are just literal asterisks within a code block. This means
-it's also easy to use Markdown to write about Markdown's own syntax.
+Ad eum fastidii voluptatum, in tamquam definiebas honestatis nec, ei nostro
+melius his. Elitr adolescens an cum, omnes discere hendrerit eos ea, id essent.
 
 ### Math
 
@@ -224,43 +217,24 @@ Equation environment (no numbering):
 = -\frac{\cos^3 x}{3} + \frac{\cos^5 x}{5} + C
 \end {equation*}
 
-Here is some math that will also work with html output:
-$$E=mc^2$$
-
 ## Span Elements
 
 ### Links
 
 Markdown supports two style of links: *inline* and *reference*.
-
-In both styles, the link text is delimited by [square brackets].
-
-To create an inline link, use a set of regular parentheses immediately
-after the link text's closing square bracket. Inside the parentheses,
-put the URL where you want the link to point, along with an *optional*
-title for the link, surrounded in quotes. For example:
+In both styles, the link text is delimited by \[square brackets\].
 
 This is [an example](http://example.com/ "This is a link title for example-com") inline link.
 
 [This link](http://example.net/) has no title attribute.
 
+Also, one can have an automatic link using \<angle brackets\> like <https://www.archlinux.org/packages/>.
+
 ### Emphasis
 
-Markdown treats asterisks (`*`) and underscores (`_`) as indicators of
-emphasis. Text wrapped with one `*` or `_` will be wrapped with an
-HTML `<em>` tag; double `*`'s or `_`'s will be wrapped with an HTML
-`<strong>` tag. E.g., this input:
+Emphasis is `_` and bold is `**`.
 
-*single asterisks*
-
-_single underscores_
-
-**double asterisks**
-
-__double underscores__
-
-### Code
-
-To indicate a span of code, wrap it with backtick quotes (\`).
-Unlike a pre-formatted code block, a code span indicates code within a
-normal paragraph. For example:
+*single asterisks*,
+_single underscores_,
+**double asterisks**,
+__double underscores__,
