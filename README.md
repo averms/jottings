@@ -1,6 +1,6 @@
 # Jottings
 
-> A theme for pandoc's html output
+> A featherweight (4kb gzipped) theme for pandoc's html output
 
 [Demo page.](https://a-vrma.github.io/jottings/)
 
