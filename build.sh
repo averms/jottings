@@ -15,6 +15,8 @@ sed "s|{{jottings}}|${testdir}/jottings.css|" ../jottings.html \
 sed 's|{{jottings}}|jottings.css|' ../jottings.html \
     >jottings.temp
 
-# pandoc --template jottings.temp --toc -o "test.html" "test.md"
+pandoc \
+    -f markdown-fancy_lists-fenced_code_blocks-simple_tables-latex_macros+compact_definition_lists \
+    --template jottings.temp --toc -o "test.html" "test.md"
 cp test.html ../docs/index.html
 cp jottings.css ../docs/jottings.css

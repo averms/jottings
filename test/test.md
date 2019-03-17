@@ -164,7 +164,10 @@ Here is a definition list.
 
 Term 1
   ~ uno
-    ake
+    ek
+Term 2
+  ~ dos
+    do
 
 ### Code Blocks
 

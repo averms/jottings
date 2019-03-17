@@ -171,7 +171,7 @@
 <p>Blockquotes can contain other Markdown elements, including headers, lists, and code blocks:</p>
 <blockquote>
 <h2 id="this-is-a-header.">This is a header.</h2>
-<ol type="1">
+<ol>
 <li>This is the first list item.</li>
 <li>This is the second list item.</li>
 </ol>
@@ -188,20 +188,20 @@
 <li>Blue</li>
 </ul>
 <p>Ordered lists use numbers followed by periods:</p>
-<ol type="1">
+<ol>
 <li>Bird</li>
 <li>McHale</li>
 <li>Parish</li>
 </ol>
 <p>or even:</p>
-<ol start="3" type="1">
+<ol start="3">
 <li>Bird</li>
 <li>McHale</li>
 <li>Parish</li>
 </ol>
 <p>In pandoc, the number you start with is just incremented. So if I start with 3 and then use random numbers afterwards, the list is normalized to start at 3 and count by ones.</p>
 <p>List items may consist of multiple paragraphs. Each subsequent paragraph in a list item must be indented by either 4 spaces or one tab:</p>
-<ol type="1">
+<ol>
 <li><p>This is a list item with two paragraphs. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.</p>
 <p>ὅσοι οἰόμεθα κακὸν εἶναι τὸ τεθνάναι. μέγα μοι τεκμήριον τούτου γέγονεν: οὐ γὰρ ἔσθ᾽ ὅπως οὐκ ἠναντιώθη ἄν μοι τὸ εἰωθὸς σημεῖον, εἰ μή τι ἔμελλον ἐγὼ ἀγαθὸν πράξειν. ἐννοήσωμεν δὲ καὶ τῇδε ὡς πολλὴ ἐλπίς ἐστιν ἀγαθὸν αὐτὸ εἶναι. δυοῖν γὰρ θάτερόν ἐστιν τὸ τεθνάναι: ἢ γὰρ οἷον μηδὲν εἶναι μηδὲ αἴσθησιν μηδεμίαν μηδενὸς ἔχειν τὸν τεθνεῶτα, ἢ κατὰ τὰ λεγόμενα μεταβολή τις τυγχάνει οὖσα καὶ μετοίκησις τῇ ψυχῇ τοῦ τόπου τοῦ ἐνθένδε εἰς ἄλλον τόπον. καὶ εἴτε δὴ μηδεμία αἴσθησίς ἐστιν ἀλλ᾽</p></li>
 <li><p>Suspendisse id sem consectetuer libero luctus adipiscing.</p></li>
@@ -221,7 +221,10 @@
 <p>Here is a definition list.</p>
 <dl>
 <dt>Term 1</dt>
-<dd>uno ake
+<dd>uno ek
+</dd>
+<dt>Term 2</dt>
+<dd>dos do
 </dd>
 </dl>
 <h3 id="code-blocks">Code Blocks</h3>
