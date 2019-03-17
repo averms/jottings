@@ -12,7 +12,7 @@ lang: en
 ###### Head 6
 
 | Template variable | Value appears in:                                  |
-|-------------------|----------------------------------------------------|
+|:------------------|----------------------------------------------------|
 | `description`     | Content of HTML tag `meta name="description"`      |
 | `headnote`        | Document, preceding value of variable `published`  |
 | `published`       | Document, preceding value of variable `license`    |
