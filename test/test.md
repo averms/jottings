@@ -453,9 +453,9 @@ From "Voyage dans la Lune" by Georges Melies (1902):
 
 ![lalune][]
 
-[lalune]: lalune.jpg "Voyage dans la Lune"
+[lalune]: https://user-images.githubusercontent.com/29077900/55016063-6b117000-4fc4-11e9-9c43-9f8e8983866b.jpg "Voyage dans la Lune"
 
-Here is a movie ![movie](movie.jpg) icon.
+Here is a movie ![movie](https://user-images.githubusercontent.com/29077900/55016070-6d73ca00-4fc4-11e9-97da-ee9ba9f9e3cb.jpg) icon.
 
 ----
 

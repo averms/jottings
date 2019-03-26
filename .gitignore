@@ -10,4 +10,6 @@
 *.sass.map
 *.scss.map
 
+test/*.jpg
+
 *.py
