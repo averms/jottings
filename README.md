@@ -27,6 +27,10 @@ if you want fully standalone files.
 - Styling for every feature of pandoc's markdown.
 - Styles table of contents if used with `--toc`.
 
+## Todo
+
+- View end of table of contents.
+
 ## License
 
 MIT/Expat. Includes [normalize.css](https://github.com/necolas/normalize.css)

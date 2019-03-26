@@ -1,190 +1,478 @@
----
-title: example.md
-lang: en
+% Pandoc Test Suite
+% John MacFarlane; Anonymous
+% July 17, 2006
+
+This is a set of tests for pandoc.  Most of them are adapted from
+John Gruber's markdown test suite.
+
+-----
+
+# Headers
+
+## Level 2 with an [embedded link](/url)
+
+### Level 3 with *emphasis*
+
+#### Level 4
+
+##### Level 5
+
+Level 1
+=======
+
+Level 2 with *emphasis*
+-----------------------
+
+### Level 3
+with no blank line
+
+Level 2
+-------
+with no blank line
+
+----------
+
+# Paragraphs
+
+Here's a regular paragraph.
+
+In Markdown 1.0.0 and earlier. Version
+8. This line turns into a list item.
+Because a hard-wrapped line in the
+middle of a paragraph looked like a
+list item.
+
+Here's one with a bullet.
+* criminey.
+
+There should be a hard line break  
+here.
+
 ---
 
-## The Jottings Test File
-### Third levelu heading
-#### Fourth leeevel 4
-##### Head 5
-###### Head 6 -- a table
+# Block Quotes
 
-| Template variable | Value appears in:                                  |
-|:------------------|----------------------------------------------------|
-| `description`     | Content of HTML tag `meta name="description"`      |
-| `headnote`        | Document, preceding value of variable `published`  |
-| `published`       | Document, preceding value of variable `license`    |
-| `license`         | Document, preceding value of variable `title`      |
-| _version_         | Document, preceding value of variable `date`       |
-| `abstract`        | Document, preceding the table of contents (if any) |
+E-mail style:
+
+> This is a block quote.
+> It is pretty short.
+
+> Code in a block quote: 
+> 
+>     sub status {
+>         print "working";
+>     }
+> 
+> A list: 
+> 
+> 1. item one
+> 2. item two
+>
+> Nested block quotes:
+>
+> > nested
+>
+>>  nested
+>
+
+This should not be a block quote: 2
+> 1.
+
+And a following paragraph.
+
+* * * *
+
+# Code Blocks
+
+Code:
+
+    ---- (should be four hyphens)
+
+    sub status {
+        print "working";
+    }
+
+	this code block is indented by one tab
+
+And:
+
+		this code block is indented by two tabs
+
+    These should not be escaped:  \$ \\ \> \[ \{
 
 ----
 
-## Overview
+# Lists
 
-### Philosophy
+## Unordered
 
-Markdown is intended to be as easy-to-read and easy-to-write as is feasible.
+Asterisks tight:
 
-Readability, however, is emphasized above all else. A Markdown-formatted document should
-be publishable as-is, as plain text, without looking like it's been marked up with tags or
-formatting instructions. While Markdown's syntax has been influenced by several existing
-text-to-HTML filters --- including
-[Setext](http://docutils.sourceforge.net/mirror/setext.html),
-[atx](http://www.aaronsw.com/2002/atx/), [Textile](http://textism.com/tools/textile/),
-[reStructuredText](http://docutils.sourceforge.net/rst.html),
-[Grutatext](http://www.triptico.com/software/grutatxt.html), and
-[EtText](http://ettext.taint.org/doc/) --- the single biggest source of inspiration for
-Markdown's syntax is the format of plain text email.
-H~2~O is a liquid and an example of subscript.
+*	asterisk 1
+*	asterisk 2
+*	asterisk 3
 
-## Block Elements?
+## Ordered
 
-### Paragraphs and Line Breaks
+Tight:
 
-A paragraph is simply one or more consecutive lines of text, separated
-by one or more blank lines. (A blank line is any line that looks like a
-blank line -- a line containing nothing but spaces or tabs is considered
-blank.) Normal paragraphs should not be indented with spaces or tabs[^2].
+1.	First
+2.	Second
+3.	Third
 
-The implication of the "one or more consecutive lines of text" rule is
-that Markdown supports "hard-wrapped" text paragraphs. This differs
-significantly from most other text-to-HTML formatters (including Movable
-Type's "Convert Line Breaks" option) which translate every line break
-character in a paragraph into a `<br />` tag.
+Multiple paragraphs:
 
-When you _do_ want to insert a `<br />` break tag using Markdown, you
-end a line with a `\`.
+1.  Item 1, graf one.
 
-[^2]: Another one my dudes. This time it is very longgg.
-      Yepp. So long, pop! I'm off to check my tiger trap! I rigged a tuna fish
-      sandwich yesterday, so I'm sure to have a tiger by now!
-
-### Blockquotes
-
-Markdown uses email-style `>` characters for blockquoting. If you're
-familiar with quoting passages of text in an email message, then you
-know how to create a blockquote in Markdown. It looks best if you hard
-wrap the text and put a `>` before every line:
-
-> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-> 
-> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-> id sem consectetuer libero luctus adipiscing.
-
-Blockquotes can be nested (i.e. a blockquote-in-a-blockquote) by
-adding additional levels of `>`:
-
-> This is the first level of quoting.
->
-> > This is nested blockquote.
->
-> Back to the first level.
-
-Blockquotes can contain other Markdown elements, including headers, lists,
-and code blocks:
-
-> ## This is a header.
-> 
-> 1. This is the first list item.
-> 2. This is the second list item.
-> 
-> Here's some example code:
-> 
-> `return shell_exec("echo $input | $markdown_script");`
-
-Any decent text editor should make email-style quoting easy. For
-example, with BBEdit, you can make a selection and choose Increase
-Quote Level from the Text menu.
-
-### Lists
-
-Markdown supports ordered (numbered) and unordered (bulleted) lists.
-
-Unordered lists use asterisks, pluses, and hyphens as markers.
-
-* Red
-* Green
-* Blue
-
-Ordered lists use numbers followed by periods:
-
-1. Bird
-1. McHale
-1. Parish
-
-or even:
-
-3. Bird
-1. McHale
-8. Parish
-
-In pandoc, the number you start with is just incremented. So if I start with 3 and then
-use random numbers afterwards, the list is normalized to start at 3 and count by ones.
-
-List items may consist of multiple paragraphs. Each subsequent
-paragraph in a list item must be indented by either 4 spaces
-or one tab:
-
-1. This is a list item with two paragraphs. Lorem ipsum dolor sit amet, consectetuer
-   adipiscing elit. Aliquam hendrerit mi posuere lectus.
-   
-   ὅσοι οἰόμεθα κακὸν εἶναι τὸ
-   τεθνάναι. μέγα μοι τεκμήριον τούτου γέγονεν: οὐ γὰρ ἔσθ᾽ ὅπως οὐκ ἠναντιώθη ἄν μοι τὸ
-   εἰωθὸς σημεῖον, εἰ μή τι ἔμελλον ἐγὼ ἀγαθὸν πράξειν. ἐννοήσωμεν δὲ καὶ τῇδε ὡς πολλὴ
-   ἐλπίς ἐστιν ἀγαθὸν αὐτὸ εἶναι. δυοῖν γὰρ θάτερόν ἐστιν τὸ τεθνάναι: ἢ γὰρ οἷον μηδὲν
-   εἶναι μηδὲ αἴσθησιν μηδεμίαν μηδενὸς ἔχειν τὸν τεθνεῶτα, ἢ κατὰ τὰ λεγόμενα μεταβολή
-   τις τυγχάνει οὖσα καὶ μετοίκησις τῇ ψυχῇ τοῦ τόπου τοῦ ἐνθένδε εἰς ἄλλον τόπον. καὶ
-   εἴτε δὴ μηδεμία αἴσθησίς ἐστιν ἀλλ᾽
-    
-2. Suspendisse id sem consectetuer libero luctus adipiscing.
-
-It looks nice if you indent every line of the subsequent
-paragraphs, but here again, Markdown will allow you to be
-lazy:
-
-* This is a list item with two paragraphs.  This is the second paragraph in the list item.
-  You're only required to indent the first line. Lorem ipsum dolor sit amet, consectetuer
-  adipiscing elit.
-* Another item in the same list.
-
-Blockquotes within list items are not supported by output.
-
-* A list item with a blockquote:
+    Item 1. graf two. The quick brown fox jumped over the lazy dog's back.
   
-  > This is a blockquote
-  > inside a list item.
+2.  Item 2.
+    ὅσοι οἰόμεθα κακὸν εἶναι τὸ
+    τεθνάναι. μέγα μοι τεκμήριον τούτου γέγονεν: οὐ γὰρ ἔσθ᾽ ὅπως οὐκ ἠναντιώθη ἄν μοι τὸ
+    εἰωθὸς σημεῖον, εἰ μή τι ἔμελλον ἐγὼ ἀγαθὸν πράξειν. ἐννοήσωμεν δὲ καὶ τῇδε ὡς πολλὴ
+    ἐλπίς ἐστιν ἀγαθὸν αὐτὸ εἶναι. δυοῖν γὰρ θάτερόν ἐστιν τὸ τεθνάναι: ἢ γὰρ οἷον μηδὲν
+    εἶναι μηδὲ αἴσθησιν μηδεμίαν μηδενὸς ἔχειν τὸν τεθνεῶτα, ἢ κατὰ τὰ λεγόμενα μεταβολή
+    τις τυγχάνει οὖσα καὶ μετοίκησις τῇ ψυχῇ τοῦ τόπου τοῦ ἐνθένδε εἰς ἄλλον τόπον. καὶ
+    εἴτε δὴ μηδεμία αἴσθησίς ἐστιν ἀλλ᾽
+    
+3.  Item 3.
 
-Here is a definition list.
+## Nested
 
-Term 1
-  ~ uno
-    ek
-Term 2
-  ~ dos
-    do
+*	Tab
+	*	Tab
+		*	Tab
 
-### Code Blocks
+Here's another:
 
-```haskell
-<-< <<- <-- <- <-> -> --> ->> >->
-<=< <<= <==    <=> => ==> =>> >=>
-    >>= >>- >- <~> -< -<< =<<
-        <~~ <~ ~~ ~> ~~>
-```
+1. First
+2. Second:
+	* Fee
+	* Fie
+	* Foe
+3. Third
 
-Pre-formatted code blocks are used for writing about programming or
-markup source code. Rather than forming normal paragraphs, the lines
-of a code block are interpreted literally. Markdown wraps a code block
-in both `<pre>` and `<code>` tags.
+Same thing but with paragraphs:
 
-This is a normal paragraph:
+1. First
 
-    This is a classless code block.
+2. Second:
 
-Here is an example of AppleScript (not highlighted by pandoc):
+	* Fee
+	* Fie
+	* Foe
+
+3. Third 
+
+## Tabs and spaces
+
++	this is a list item
+	indented with tabs
+
++   this is a list item
+    indented with spaces
+
+	+	this is an example list item
+		indented with tabs
+	
+	+   this is an example list item
+	    indented with spaces
+
+## Fancy list markers
+
+Should not be a list item:
+
+M.A. 2007
+
+B. Williams
+
+----
+
+# Definition Lists
+
+Multiple blocks with italics:
+
+*apple*
+
+:   red fruit
+
+    contains seeds,
+    crisp, pleasant to taste
+
+*orange*
+
+:   orange fruit
+
+        { orange code block }
+
+    > orange block quote
+
+Multiple definitions, tight:
+
+apple
+:   red fruit
+:   computer
+
+orange
+:   orange fruit
+:   bank
+
+Multiple definitions, loose:
+
+apple
+
+:   red fruit
+
+:   computer
+
+orange
+
+:   orange fruit
+
+:   bank
+
+Blank line after term, indented marker, alternate markers:
+
+apple
+
+  ~ red fruit
+
+  ~ computer
+
+orange
+
+  ~ orange fruit
+
+    1. sublist
+    2. sublist
+
+# HTML Blocks
+
+Here's a simple block:
+
+<div>
+foo
+</div>
+
+This should be a code block, though:
+
+    <div>
+    foo
+    </div>
+
+As should this:
+
+    <div>foo</div>
+
+This should just be an HTML comment:
+
+<!-- Comment -->
+
+Multiline:
+
+<!--
+Blah
+Blah
+-->
+
+<!--
+	This is another comment.
+-->
+
+Code block:
+
+	<!-- Comment -->
+
+Just plain comment, with trailing spaces on the line:
+
+<!-- foo -->   
+
+-----
+
+# Inline Markup
+
+This is *emphasized*, and so _is this_.
+
+This is **strong**, and so __is this__.
+
+An *[emphasized link](/url)*.
+
+***This is strong and em.***
+
+So is ***this*** word.
+
+___This is strong and em.___
+
+So is ___this___ word.
+
+This is code: `>`, `$`, `\`, `\$`, `<html>`.
+
+~~This is *strikeout*.~~
+
+Superscripts:  a^bc^d a^*hello*^ a^hello\ there^.
+
+Subscripts: H~2~O, H~23~O, H~many\ of\ them~O.
+
+These should not be superscripts or subscripts,
+because of the unescaped spaces:  a^b c^d, a~b c~d.
+
+-----
+
+# Smart quotes, ellipses, dashes
+
+"Hello," said the spider.  "'Shelob' is my name."
+
+Here is some quoted '`code`' and a "[quoted link][1]".
+
+Ellipses...and...and....
+
+-----
+
+# LaTeX
+
+- $2+2=4$
+- $x \in y$
+- $\alpha \wedge \omega$
+- $223$ 
+- $p$-Tree
+
+These shouldn't be math:
+
+- To get the famous equation, write `$e = mc^2$`.
+- $22,000 is a *lot* of money.  So is $34,000.
+  (It worked if "lot" is emphasized.)
+- Shoes ($20) and socks ($5).
+- Escaped `$`:  $73 *this should be emphasized* 23\$.
+
+Here's a LaTeX table:
+
+\begin{tabular}{|l|l|}\hline
+Animal & Number \\ \hline
+Dog    & 2      \\
+Cat    & 1      \\ \hline
+\end{tabular}
+
+* * * * *
+
+# Special Characters
+
+Here is some unicode:
+
+- I hat: Î
+- o umlaut: ö
+- section: § 
+- set membership: ∈
+- copyright: ©
+
+AT&T has an ampersand in their name.
+
+AT&amp;T is another way to write it.
+
+This & that.
+
+4 < 5.
+
+6 > 5.
+
+Backslash: \\
+
+- - - - - - - - - - - - -
+
+# Links
+
+## Explicit
+
+Just a [URL](/url/).
+
+[URL and title](/url/  "title preceded by two spaces").
+
+[with\_underscore](/url/with_underscore)
+
+[Email link](mailto:nobody@nowhere.net)
+
+[Empty]().
+
+## Reference
+
+Foo [bar][a].
+
+[a]: /url/
+
+With [embedded [brackets]][b].
+
+[b] by itself should be a link.
+
+Indented [once][].
+
+Indented [twice][].
+
+Indented [thrice][].
+
+This should [not][] be a link.
+
+ [once]: /url
+  [twice]: /url
+
+   [thrice]: /url
+
+    [not]: /url
+
+[b]: /url/
+
+Foo [bar][].
+
+Foo [biz](/url/ "Title with "quote" inside").
+
+  [bar]: /url/ "Title with "quotes" inside"
+
+## With ampersands
+
+Here's a [link with an ampersand in the URL][1].
+
+[1]: http://example.com/?foo=1&bar=2
+
+## Autolinks
+
+* In a list?
+* <http://example.com/>
+* It should.
+
+An e-mail address:  <nobody@nowhere.net>
+
+> Blockquoted: <http://example.com/>
+
+Auto-links should not occur here: `<http://example.com/>`
+
+    or here: <http://example.com/>
+
+----
+
+# Images
+
+From "Voyage dans la Lune" by Georges Melies (1902):
+
+![lalune][]
+
+[lalune]: lalune.jpg "Voyage dans la Lune"
+
+Here is a movie ![movie](movie.jpg) icon.
+
+----
+
+# Footnotes
+
+Here is a footnote reference,[^1] and another.[^longnote]
+This should *not* be a footnote reference, because it 
+contains a space.[^my note]  Here is an inline note.^[This
+is *easier* to type.  Inline notes may contain
+[links](http://google.com) and `]` verbatim characters,
+as well as [bracketed text].]
+
+> Notes can go in quotes.^[In quote.]
+
+1.  And in list items.^[In list.]
+
+# Pre and code
 
 ```{.applescript}
 tell application "Foo"
@@ -192,49 +480,18 @@ tell application "Foo"
 end tell
 ```
 
-Here is an include:
+[^longnote]: Here's the long note.  This one contains multiple
+blocks.  
 
-```{.python nope=yeet file=../../log_generator/log_generator.py #yee}
-```
+    Subsequent blocks are indented to show that they belong to the
+footnote (as with list items).
 
-Ad eum fastidii voluptatum, in tamquam definiebas honestatis nec, ei nostro
-melius his. Elitr adolescens an cum, omnes discere hendrerit eos ea, id essent.
+          { <code> }
 
-### Math
+    If you want, you can indent every line, but you can also be
+    lazy and just indent the first line of each block.
 
-Inline is `$_$` and block is `$$_$$`. Pandoc will pass-through raw so you can also
-use typical `amsmath` constructs.
+This paragraph should not be part of the note, as it is not indented.
 
-\begin{align}
-f(x) &= \int \sin^3 x \cos^2 x \,dx \\
-     &= -\frac{\cos^3 x}{3} + \frac{\cos^5 x}{5} + C
-\end{align}
-
-Equation environment (no numbering):
-
-\begin{equation*}
-\int \sin^3 x \cos^2 x \,dx
-= -\frac{\cos^3 x}{3} + \frac{\cos^5 x}{5} + C
-\end {equation*}
-
-## Span Elements
-
-### Links
-
-Markdown supports two style of links: *inline* and *reference*.
-In both styles, the link text is delimited by \[square brackets\].
-
-This is [an example](http://example.com/ "This is a link title for example-com") inline link.
-
-[This link](http://example.net/) has no title attribute.
-
-Also, one can have an automatic link using \<angle brackets\> like <https://www.archlinux.org/packages/>.
-
-### Emphasis
-
-Emphasis is `_` and bold is `**`.
-
-*single asterisks*,
-_single underscores_,
-**double asterisks**,
-__double underscores__,
+  [^1]: Here is the footnote.  It can go anywhere after the footnote
+  reference.  It need not be placed at the end of the document.

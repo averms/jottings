@@ -1,75 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html>
 
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>example.md</title>
+  <meta name="author" content="John MacFarlane">
+  <meta name="author" content="John MacFarlane">
+  <meta name="dcterms.date" content="2006-07-17">
+  <title>Pandoc Test Suite</title>
 
-  <style>
-  a.sourceLine { display: inline-block; line-height: 1.25; }
-  a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-  a.sourceLine:empty { height: 1.2em; }
-  .sourceCode { overflow: visible; }
-  code.sourceCode { white-space: pre; position: relative; }
-  div.sourceCode { margin: 1em 0; }
-  pre.sourceCode { margin: 0; }
-  @media screen {
-  div.sourceCode { overflow: auto; }
-  }
-  @media print {
-  code.sourceCode { white-space: pre-wrap; }
-  a.sourceLine { text-indent: -1em; padding-left: 1em; }
-  }
-  pre.numberSource a.sourceLine
-    { position: relative; left: -4em; }
-  pre.numberSource a.sourceLine::before
-    { content: attr(title);
-      position: relative; left: -1em; text-align: right; vertical-align: baseline;
-      border: none; pointer-events: all; display: inline-block;
-      -webkit-touch-callout: none; -webkit-user-select: none;
-      -khtml-user-select: none; -moz-user-select: none;
-      -ms-user-select: none; user-select: none;
-      padding: 0 4px; width: 4em;
-      color: #aaaaaa;
-    }
-  pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-  div.sourceCode
-    {  }
-  @media screen {
-  a.sourceLine::before { text-decoration: underline; }
-  }
-  code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-  code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-  code span.at { color: #7d9029; } /* Attribute */
-  code span.bn { color: #40a070; } /* BaseN */
-  code span.bu { } /* BuiltIn */
-  code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-  code span.ch { color: #4070a0; } /* Char */
-  code span.cn { color: #880000; } /* Constant */
-  code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-  code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-  code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-  code span.dt { color: #902000; } /* DataType */
-  code span.dv { color: #40a070; } /* DecVal */
-  code span.er { color: #ff0000; font-weight: bold; } /* Error */
-  code span.ex { } /* Extension */
-  code span.fl { color: #40a070; } /* Float */
-  code span.fu { color: #06287e; } /* Function */
-  code span.im { } /* Import */
-  code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-  code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-  code span.op { color: #666666; } /* Operator */
-  code span.ot { color: #007020; } /* Other */
-  code span.pp { color: #bc7a00; } /* Preprocessor */
-  code span.sc { color: #4070a0; } /* SpecialChar */
-  code span.ss { color: #bb6688; } /* SpecialString */
-  code span.st { color: #4070a0; } /* String */
-  code span.va { color: #19177c; } /* Variable */
-  code span.vs { color: #4070a0; } /* VerbatimString */
-  code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-  </style>
   <link rel="stylesheet" href="jottings.css">
 </head>
 
@@ -79,185 +19,376 @@
 <nav id="TOC" class="styled">
 <h5 id="toctitle">Table of Contents</h5>
 <ul>
-<li><a href="#the-jottings-test-file">The Jottings Test File</a><ul>
-<li><a href="#third-levelu-heading">Third levelu heading</a></li>
+<li><a href="#headers">Headers</a><ul>
+<li><a href="#level-2-with-an-embedded-link">Level 2 with an <span>embedded link</span></a><ul>
+<li><a href="#level-3-with-emphasis">Level 3 with <em>emphasis</em></a></li>
 </ul></li>
-<li><a href="#overview">Overview</a><ul>
-<li><a href="#philosophy">Philosophy</a></li>
 </ul></li>
-<li><a href="#block-elements">Block Elements?</a><ul>
-<li><a href="#paragraphs-and-line-breaks">Paragraphs and Line Breaks</a></li>
-<li><a href="#blockquotes">Blockquotes</a></li>
-<li><a href="#lists">Lists</a></li>
+<li><a href="#level-1">Level 1</a><ul>
+<li><a href="#level-2-with-emphasis">Level 2 with <em>emphasis</em></a><ul>
+<li><a href="#level-3">Level 3</a></li>
+</ul></li>
+<li><a href="#level-2">Level 2</a></li>
+</ul></li>
+<li><a href="#paragraphs">Paragraphs</a></li>
+<li><a href="#block-quotes">Block Quotes</a></li>
 <li><a href="#code-blocks">Code Blocks</a></li>
-<li><a href="#math">Math</a></li>
+<li><a href="#lists">Lists</a><ul>
+<li><a href="#unordered">Unordered</a></li>
+<li><a href="#ordered">Ordered</a></li>
+<li><a href="#nested">Nested</a></li>
+<li><a href="#tabs-and-spaces">Tabs and spaces</a></li>
+<li><a href="#fancy-list-markers">Fancy list markers</a></li>
 </ul></li>
-<li><a href="#span-elements">Span Elements</a><ul>
-<li><a href="#links">Links</a></li>
-<li><a href="#emphasis">Emphasis</a></li>
+<li><a href="#definition-lists">Definition Lists</a></li>
+<li><a href="#html-blocks">HTML Blocks</a></li>
+<li><a href="#inline-markup">Inline Markup</a></li>
+<li><a href="#smart-quotes-ellipses-dashes">Smart quotes, ellipses, dashes</a></li>
+<li><a href="#latex">LaTeX</a></li>
+<li><a href="#special-characters">Special Characters</a></li>
+<li><a href="#links">Links</a><ul>
+<li><a href="#explicit">Explicit</a></li>
+<li><a href="#reference">Reference</a></li>
+<li><a href="#with-ampersands">With ampersands</a></li>
+<li><a href="#autolinks">Autolinks</a></li>
 </ul></li>
+<li><a href="#images">Images</a></li>
+<li><a href="#footnotes">Footnotes</a></li>
+<li><a href="#pre-and-code">Pre and code</a></li>
 </ul>
-<footer><a href="https://github.com/a-vrma/jottings">Made with Jottings v0.1</a></footer>
 </nav>
 
 <main>
 <article class="styled">
-<h1 id="title">example.md</h1>
-<h2 id="the-jottings-test-file">The Jottings Test File</h2>
-<h3 id="third-levelu-heading">Third levelu heading</h3>
-<h4 id="fourth-leeevel-4">Fourth leeevel 4</h4>
-<h5 id="head-5">Head 5</h5>
-<h6 id="head-6-a-table">Head 6 – a table</h6>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Template variable</th>
-<th>Value appears in:</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><code>description</code></td>
-<td>Content of HTML tag <code>meta name="description"</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>headnote</code></td>
-<td>Document, preceding value of variable <code>published</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>published</code></td>
-<td>Document, preceding value of variable <code>license</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>license</code></td>
-<td>Document, preceding value of variable <code>title</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><em>version</em></td>
-<td>Document, preceding value of variable <code>date</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>abstract</code></td>
-<td>Document, preceding the table of contents (if any)</td>
-</tr>
-</tbody>
-</table>
+<h1 id="title">Pandoc Test Suite</h1>
+<p>This is a set of tests for pandoc. Most of them are adapted from John Gruber’s markdown test suite.</p>
 <hr />
-<h2 id="overview">Overview</h2>
-<h3 id="philosophy">Philosophy</h3>
-<p>Markdown is intended to be as easy-to-read and easy-to-write as is feasible.</p>
-<p>Readability, however, is emphasized above all else. A Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions. While Markdown’s syntax has been influenced by several existing text-to-HTML filters — including <a href="http://docutils.sourceforge.net/mirror/setext.html">Setext</a>, <a href="http://www.aaronsw.com/2002/atx/">atx</a>, <a href="http://textism.com/tools/textile/">Textile</a>, <a href="http://docutils.sourceforge.net/rst.html">reStructuredText</a>, <a href="http://www.triptico.com/software/grutatxt.html">Grutatext</a>, and <a href="http://ettext.taint.org/doc/">EtText</a> — the single biggest source of inspiration for Markdown’s syntax is the format of plain text email. H<sub>2</sub>O is a liquid and an example of subscript.</p>
-<h2 id="block-elements">Block Elements?</h2>
-<h3 id="paragraphs-and-line-breaks">Paragraphs and Line Breaks</h3>
-<p>A paragraph is simply one or more consecutive lines of text, separated by one or more blank lines. (A blank line is any line that looks like a blank line – a line containing nothing but spaces or tabs is considered blank.) Normal paragraphs should not be indented with spaces or tabs<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
-<p>The implication of the “one or more consecutive lines of text” rule is that Markdown supports “hard-wrapped” text paragraphs. This differs significantly from most other text-to-HTML formatters (including Movable Type’s “Convert Line Breaks” option) which translate every line break character in a paragraph into a <code>&lt;br /&gt;</code> tag.</p>
-<p>When you <em>do</em> want to insert a <code>&lt;br /&gt;</code> break tag using Markdown, you end a line with a <code>\</code>.</p>
-<h3 id="blockquotes">Blockquotes</h3>
-<p>Markdown uses email-style <code>&gt;</code> characters for blockquoting. If you’re familiar with quoting passages of text in an email message, then you know how to create a blockquote in Markdown. It looks best if you hard wrap the text and put a <code>&gt;</code> before every line:</p>
+<h1 id="headers">Headers</h1>
+<h2 id="level-2-with-an-embedded-link">Level 2 with an <a href="/url">embedded link</a></h2>
+<h3 id="level-3-with-emphasis">Level 3 with <em>emphasis</em></h3>
+<h4 id="level-4">Level 4</h4>
+<h5 id="level-5">Level 5</h5>
+<h1 id="level-1">Level 1</h1>
+<h2 id="level-2-with-emphasis">Level 2 with <em>emphasis</em></h2>
+<h3 id="level-3">Level 3</h3>
+<p>with no blank line</p>
+<h2 id="level-2">Level 2</h2>
+<p>with no blank line</p>
+<hr />
+<h1 id="paragraphs">Paragraphs</h1>
+<p>Here’s a regular paragraph.</p>
+<p>In Markdown 1.0.0 and earlier. Version 8. This line turns into a list item. Because a hard-wrapped line in the middle of a paragraph looked like a list item.</p>
+<p>Here’s one with a bullet. * criminey.</p>
+<p>There should be a hard line break<br />
+here.</p>
+<hr />
+<h1 id="block-quotes">Block Quotes</h1>
+<p>E-mail style:</p>
 <blockquote>
-<p>This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</p>
-<p>Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse id sem consectetuer libero luctus adipiscing.</p>
+<p>This is a block quote. It is pretty short.</p>
 </blockquote>
-<p>Blockquotes can be nested (i.e. a blockquote-in-a-blockquote) by adding additional levels of <code>&gt;</code>:</p>
 <blockquote>
-<p>This is the first level of quoting.</p>
-<blockquote>
-<p>This is nested blockquote.</p>
-</blockquote>
-<p>Back to the first level.</p>
-</blockquote>
-<p>Blockquotes can contain other Markdown elements, including headers, lists, and code blocks:</p>
-<blockquote>
-<h2 id="this-is-a-header.">This is a header.</h2>
+<p>Code in a block quote:</p>
+<pre><code>sub status {
+    print &quot;working&quot;;
+}</code></pre>
+<p>A list:</p>
 <ol>
-<li>This is the first list item.</li>
-<li>This is the second list item.</li>
+<li>item one</li>
+<li>item two</li>
 </ol>
-<p>Here’s some example code:</p>
-<p><code>return shell_exec("echo $input | $markdown_script");</code></p>
-</blockquote>
-<p>Any decent text editor should make email-style quoting easy. For example, with BBEdit, you can make a selection and choose Increase Quote Level from the Text menu.</p>
-<h3 id="lists">Lists</h3>
-<p>Markdown supports ordered (numbered) and unordered (bulleted) lists.</p>
-<p>Unordered lists use asterisks, pluses, and hyphens as markers.</p>
-<ul>
-<li>Red</li>
-<li>Green</li>
-<li>Blue</li>
-</ul>
-<p>Ordered lists use numbers followed by periods:</p>
-<ol>
-<li>Bird</li>
-<li>McHale</li>
-<li>Parish</li>
-</ol>
-<p>or even:</p>
-<ol start="3">
-<li>Bird</li>
-<li>McHale</li>
-<li>Parish</li>
-</ol>
-<p>In pandoc, the number you start with is just incremented. So if I start with 3 and then use random numbers afterwards, the list is normalized to start at 3 and count by ones.</p>
-<p>List items may consist of multiple paragraphs. Each subsequent paragraph in a list item must be indented by either 4 spaces or one tab:</p>
-<ol>
-<li><p>This is a list item with two paragraphs. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.</p>
-<p>ὅσοι οἰόμεθα κακὸν εἶναι τὸ τεθνάναι. μέγα μοι τεκμήριον τούτου γέγονεν: οὐ γὰρ ἔσθ᾽ ὅπως οὐκ ἠναντιώθη ἄν μοι τὸ εἰωθὸς σημεῖον, εἰ μή τι ἔμελλον ἐγὼ ἀγαθὸν πράξειν. ἐννοήσωμεν δὲ καὶ τῇδε ὡς πολλὴ ἐλπίς ἐστιν ἀγαθὸν αὐτὸ εἶναι. δυοῖν γὰρ θάτερόν ἐστιν τὸ τεθνάναι: ἢ γὰρ οἷον μηδὲν εἶναι μηδὲ αἴσθησιν μηδεμίαν μηδενὸς ἔχειν τὸν τεθνεῶτα, ἢ κατὰ τὰ λεγόμενα μεταβολή τις τυγχάνει οὖσα καὶ μετοίκησις τῇ ψυχῇ τοῦ τόπου τοῦ ἐνθένδε εἰς ἄλλον τόπον. καὶ εἴτε δὴ μηδεμία αἴσθησίς ἐστιν ἀλλ᾽</p></li>
-<li><p>Suspendisse id sem consectetuer libero luctus adipiscing.</p></li>
-</ol>
-<p>It looks nice if you indent every line of the subsequent paragraphs, but here again, Markdown will allow you to be lazy:</p>
-<ul>
-<li>This is a list item with two paragraphs. This is the second paragraph in the list item. You’re only required to indent the first line. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-<li>Another item in the same list.</li>
-</ul>
-<p>Blockquotes within list items are not supported by output.</p>
-<ul>
-<li><p>A list item with a blockquote:</p>
+<p>Nested block quotes:</p>
 <blockquote>
-<p>This is a blockquote inside a list item.</p>
-</blockquote></li>
+<p>nested</p>
+</blockquote>
+<blockquote>
+<p>nested</p>
+</blockquote>
+</blockquote>
+<p>This should not be a block quote: 2 &gt; 1.</p>
+<p>And a following paragraph.</p>
+<hr />
+<h1 id="code-blocks">Code Blocks</h1>
+<p>Code:</p>
+<pre><code>---- (should be four hyphens)
+
+sub status {
+    print &quot;working&quot;;
+}
+
+this code block is indented by one tab</code></pre>
+<p>And:</p>
+<pre><code>    this code block is indented by two tabs
+
+These should not be escaped:  \$ \\ \&gt; \[ \{</code></pre>
+<hr />
+<h1 id="lists">Lists</h1>
+<h2 id="unordered">Unordered</h2>
+<p>Asterisks tight:</p>
+<ul>
+<li>asterisk 1</li>
+<li>asterisk 2</li>
+<li>asterisk 3</li>
 </ul>
-<p>Here is a definition list.</p>
+<h2 id="ordered">Ordered</h2>
+<p>Tight:</p>
+<ol>
+<li>First</li>
+<li>Second</li>
+<li>Third</li>
+</ol>
+<p>Multiple paragraphs:</p>
+<ol>
+<li><p>Item 1, graf one.</p>
+<p>Item 1. graf two. The quick brown fox jumped over the lazy dog’s back.</p></li>
+<li><p>Item 2. ὅσοι οἰόμεθα κακὸν εἶναι τὸ τεθνάναι. μέγα μοι τεκμήριον τούτου γέγονεν: οὐ γὰρ ἔσθ᾽ ὅπως οὐκ ἠναντιώθη ἄν μοι τὸ εἰωθὸς σημεῖον, εἰ μή τι ἔμελλον ἐγὼ ἀγαθὸν πράξειν. ἐννοήσωμεν δὲ καὶ τῇδε ὡς πολλὴ ἐλπίς ἐστιν ἀγαθὸν αὐτὸ εἶναι. δυοῖν γὰρ θάτερόν ἐστιν τὸ τεθνάναι: ἢ γὰρ οἷον μηδὲν εἶναι μηδὲ αἴσθησιν μηδεμίαν μηδενὸς ἔχειν τὸν τεθνεῶτα, ἢ κατὰ τὰ λεγόμενα μεταβολή τις τυγχάνει οὖσα καὶ μετοίκησις τῇ ψυχῇ τοῦ τόπου τοῦ ἐνθένδε εἰς ἄλλον τόπον. καὶ εἴτε δὴ μηδεμία αἴσθησίς ἐστιν ἀλλ᾽</p></li>
+<li><p>Item 3.</p></li>
+</ol>
+<h2 id="nested">Nested</h2>
+<ul>
+<li>Tab
+<ul>
+<li>Tab
+<ul>
+<li>Tab</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Here’s another:</p>
+<ol>
+<li>First</li>
+<li>Second:
+<ul>
+<li>Fee</li>
+<li>Fie</li>
+<li>Foe</li>
+</ul></li>
+<li>Third</li>
+</ol>
+<p>Same thing but with paragraphs:</p>
+<ol>
+<li><p>First</p></li>
+<li><p>Second:</p>
+<ul>
+<li>Fee</li>
+<li>Fie</li>
+<li>Foe</li>
+</ul></li>
+<li><p>Third</p></li>
+</ol>
+<h2 id="tabs-and-spaces">Tabs and spaces</h2>
+<ul>
+<li><p>this is a list item indented with tabs</p></li>
+<li><p>this is a list item indented with spaces</p>
+<ul>
+<li><p>this is an example list item indented with tabs</p></li>
+<li><p>this is an example list item indented with spaces</p></li>
+</ul></li>
+</ul>
+<h2 id="fancy-list-markers">Fancy list markers</h2>
+<p>Should not be a list item:</p>
+<p>M.A. 2007</p>
+<p>B. Williams</p>
+<hr />
+<h1 id="definition-lists">Definition Lists</h1>
+<p>Multiple blocks with italics:</p>
 <dl>
-<dt>Term 1</dt>
-<dd>uno ek
+<dt><em>apple</em></dt>
+<dd><p>red fruit</p>
+<p>contains seeds, crisp, pleasant to taste</p>
 </dd>
-<dt>Term 2</dt>
-<dd>dos do
+<dt><em>orange</em></dt>
+<dd><p>orange fruit</p>
+<pre><code>{ orange code block }</code></pre>
+<blockquote>
+<p>orange block quote</p>
+</blockquote>
 </dd>
 </dl>
-<h3 id="code-blocks">Code Blocks</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode haskell"><code class="sourceCode haskell"><a class="sourceLine" id="cb1-1" title="1"><span class="op">&lt;-&lt;</span> <span class="op">&lt;&lt;-</span> <span class="op">&lt;--</span> <span class="ot">&lt;-</span> <span class="op">&lt;-&gt;</span> <span class="ot">-&gt;</span> <span class="op">--&gt;</span> <span class="op">-&gt;&gt;</span> <span class="op">&gt;-&gt;</span></a>
-<a class="sourceLine" id="cb1-2" title="2"><span class="op">&lt;=&lt;</span> <span class="op">&lt;&lt;=</span> <span class="op">&lt;==</span>    <span class="op">&lt;=&gt;</span> <span class="ot">=&gt;</span> <span class="op">==&gt;</span> <span class="op">=&gt;&gt;</span> <span class="op">&gt;=&gt;</span></a>
-<a class="sourceLine" id="cb1-3" title="3">    <span class="op">&gt;&gt;=</span> <span class="op">&gt;&gt;-</span> <span class="op">&gt;-</span> <span class="op">&lt;~&gt;</span> <span class="op">-&lt;</span> <span class="op">-&lt;&lt;</span> <span class="op">=&lt;&lt;</span></a>
-<a class="sourceLine" id="cb1-4" title="4">        <span class="op">&lt;~~</span> <span class="op">&lt;~</span> <span class="op">~~</span> <span class="op">~&gt;</span> <span class="op">~~&gt;</span></a></code></pre></div>
-<p>Pre-formatted code blocks are used for writing about programming or markup source code. Rather than forming normal paragraphs, the lines of a code block are interpreted literally. Markdown wraps a code block in both <code>&lt;pre&gt;</code> and <code>&lt;code&gt;</code> tags.</p>
-<p>This is a normal paragraph:</p>
-<pre><code>This is a classless code block.</code></pre>
-<p>Here is an example of AppleScript (not highlighted by pandoc):</p>
+<p>Multiple definitions, tight:</p>
+<dl>
+<dt>apple</dt>
+<dd>red fruit
+</dd>
+<dd>computer
+</dd>
+<dt>orange</dt>
+<dd>orange fruit
+</dd>
+<dd>bank
+</dd>
+</dl>
+<p>Multiple definitions, loose:</p>
+<dl>
+<dt>apple</dt>
+<dd><p>red fruit</p>
+</dd>
+<dd><p>computer</p>
+</dd>
+<dt>orange</dt>
+<dd><p>orange fruit</p>
+</dd>
+<dd><p>bank</p>
+</dd>
+</dl>
+<p>Blank line after term, indented marker, alternate markers:</p>
+<dl>
+<dt>apple</dt>
+<dd><p>red fruit</p>
+</dd>
+<dd><p>computer</p>
+</dd>
+<dt>orange</dt>
+<dd><p>orange fruit</p>
+<ol>
+<li>sublist</li>
+<li>sublist</li>
+</ol>
+</dd>
+</dl>
+<h1 id="html-blocks">HTML Blocks</h1>
+<p>Here’s a simple block:</p>
+<div>
+<p>foo</p>
+</div>
+<p>This should be a code block, though:</p>
+<pre><code>&lt;div&gt;
+foo
+&lt;/div&gt;</code></pre>
+<p>As should this:</p>
+<pre><code>&lt;div&gt;foo&lt;/div&gt;</code></pre>
+<p>This should just be an HTML comment:</p>
+<!-- Comment -->
+<p>Multiline:</p>
+<!--
+Blah
+Blah
+-->
+<!--
+    This is another comment.
+-->
+<p>Code block:</p>
+<pre><code>&lt;!-- Comment --&gt;</code></pre>
+<p>Just plain comment, with trailing spaces on the line:</p>
+<!-- foo -->
+<hr />
+<h1 id="inline-markup">Inline Markup</h1>
+<p>This is <em>emphasized</em>, and so <em>is this</em>.</p>
+<p>This is <strong>strong</strong>, and so <strong>is this</strong>.</p>
+<p>An <em><a href="/url">emphasized link</a></em>.</p>
+<p><strong><em>This is strong and em.</em></strong></p>
+<p>So is <strong><em>this</em></strong> word.</p>
+<p><strong><em>This is strong and em.</em></strong></p>
+<p>So is <strong><em>this</em></strong> word.</p>
+<p>This is code: <code>&gt;</code>, <code>$</code>, <code>\</code>, <code>\$</code>, <code>&lt;html&gt;</code>.</p>
+<p><del>This is <em>strikeout</em>.</del></p>
+<p>Superscripts: a<sup>bc</sup>d a<sup><em>hello</em></sup> a<sup>hello there</sup>.</p>
+<p>Subscripts: H<sub>2</sub>O, H<sub>23</sub>O, H<sub>many of them</sub>O.</p>
+<p>These should not be superscripts or subscripts, because of the unescaped spaces: a^b c^d, a~b c~d.</p>
+<hr />
+<h1 id="smart-quotes-ellipses-dashes">Smart quotes, ellipses, dashes</h1>
+<p>“Hello,” said the spider. “‘Shelob’ is my name.”</p>
+<p>Here is some quoted ‘<code>code</code>’ and a “<a href="http://example.com/?foo=1&amp;bar=2">quoted link</a>”.</p>
+<p>Ellipses…and…and….</p>
+<hr />
+<h1 id="latex">LaTeX</h1>
+<ul>
+<li><span class="math inline">2 + 2 = 4</span></li>
+<li><span class="math inline"><em>x</em> ∈ <em>y</em></span></li>
+<li><span class="math inline"><em>α</em> ∧ <em>ω</em></span></li>
+<li><span class="math inline">223</span></li>
+<li><span class="math inline"><em>p</em></span>-Tree</li>
+</ul>
+<p>These shouldn’t be math:</p>
+<ul>
+<li>To get the famous equation, write <code>$e = mc^2$</code>.</li>
+<li>$22,000 is a <em>lot</em> of money. So is $34,000. (It worked if “lot” is emphasized.)</li>
+<li>Shoes ($20) and socks ($5).</li>
+<li>Escaped <code>$</code>: $73 <em>this should be emphasized</em> 23$.</li>
+</ul>
+<p>Here’s a LaTeX table:</p>
+
+<hr />
+<h1 id="special-characters">Special Characters</h1>
+<p>Here is some unicode:</p>
+<ul>
+<li>I hat: Î</li>
+<li>o umlaut: ö</li>
+<li>section: §</li>
+<li>set membership: ∈</li>
+<li>copyright: ©</li>
+</ul>
+<p>AT&amp;T has an ampersand in their name.</p>
+<p>AT&amp;T is another way to write it.</p>
+<p>This &amp; that.</p>
+<p>4 &lt; 5.</p>
+<p>6 &gt; 5.</p>
+<p>Backslash: \</p>
+<hr />
+<h1 id="links">Links</h1>
+<h2 id="explicit">Explicit</h2>
+<p>Just a <a href="/url/">URL</a>.</p>
+<p><a href="/url/" title="title preceded by two spaces">URL and title</a>.</p>
+<p><a href="/url/with_underscore">with_underscore</a></p>
+<p><a href="mailto:nobody@nowhere.net">Email link</a></p>
+<p><a href="">Empty</a>.</p>
+<h2 id="reference">Reference</h2>
+<p>Foo <a href="/url/">bar</a>.</p>
+<p>With <a href="/url/">embedded [brackets]</a>.</p>
+<p><a href="/url/">b</a> by itself should be a link.</p>
+<p>Indented <a href="/url">once</a>.</p>
+<p>Indented <a href="/url">twice</a>.</p>
+<p>Indented <a href="/url">thrice</a>.</p>
+<p>This should [not][] be a link.</p>
+<pre><code>[not]: /url</code></pre>
+<p>Foo <a href="/url/" title="Title with &quot;quotes&quot; inside">bar</a>.</p>
+<p>Foo <a href="/url/" title="Title with &quot;quote&quot; inside">biz</a>.</p>
+<h2 id="with-ampersands">With ampersands</h2>
+<p>Here’s a <a href="http://example.com/?foo=1&amp;bar=2">link with an ampersand in the URL</a>.</p>
+<h2 id="autolinks">Autolinks</h2>
+<ul>
+<li>In a list?</li>
+<li><a href="http://example.com/" class="uri">http://example.com/</a></li>
+<li>It should.</li>
+</ul>
+<p>An e-mail address: <a href="mailto:nobody@nowhere.net" class="email">nobody@nowhere.net</a></p>
+<blockquote>
+<p>Blockquoted: <a href="http://example.com/" class="uri">http://example.com/</a></p>
+</blockquote>
+<p>Auto-links should not occur here: <code>&lt;http://example.com/&gt;</code></p>
+<pre><code>or here: &lt;http://example.com/&gt;</code></pre>
+<hr />
+<h1 id="images">Images</h1>
+<p>From “Voyage dans la Lune” by Georges Melies (1902):</p>
+<figure>
+<img src="lalune.jpg" title="Voyage dans la Lune" alt="lalune" /><figcaption>lalune</figcaption>
+</figure>
+<p>Here is a movie <img src="movie.jpg" alt="movie" /> icon.</p>
+<hr />
+<h1 id="footnotes">Footnotes</h1>
+<p>Here is a footnote reference,<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> and another.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> This should <em>not</em> be a footnote reference, because it contains a space.[^my note] Here is an inline note.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<blockquote>
+<p>Notes can go in quotes.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+</blockquote>
+<ol>
+<li>And in list items.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></li>
+</ol>
+<h1 id="pre-and-code">Pre and code</h1>
 <pre class="applescript"><code>tell application &quot;Foo&quot;
   beep
 end tell</code></pre>
-<p>Here is an include:</p>
-<div class="sourceCode" id="yee" data-nope="yeet" data-file="../../log_generator/log_generator.py"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
-<p>Ad eum fastidii voluptatum, in tamquam definiebas honestatis nec, ei nostro melius his. Elitr adolescens an cum, omnes discere hendrerit eos ea, id essent.</p>
-<h3 id="math">Math</h3>
-<p>Inline is <code>$_$</code> and block is <code>$$_$$</code>. Pandoc will pass-through raw so you can also use typical <code>amsmath</code> constructs.</p>
-<p></p>
-<p>Equation environment (no numbering):</p>
-<p></p>
-<h2 id="span-elements">Span Elements</h2>
-<h3 id="links">Links</h3>
-<p>Markdown supports two style of links: <em>inline</em> and <em>reference</em>. In both styles, the link text is delimited by [square brackets].</p>
-<p>This is <a href="http://example.com/" title="This is a link title for example-com">an example</a> inline link.</p>
-<p><a href="http://example.net/">This link</a> has no title attribute.</p>
-<p>Also, one can have an automatic link using &lt;angle brackets&gt; like <a href="https://www.archlinux.org/packages/" class="uri">https://www.archlinux.org/packages/</a>.</p>
-<h3 id="emphasis">Emphasis</h3>
-<p>Emphasis is <code>_</code> and bold is <code>**</code>.</p>
-<p><em>single asterisks</em>, <em>single underscores</em>, <strong>double asterisks</strong>, <strong>double underscores</strong>,</p>
+<p>This paragraph should not be part of the note, as it is not indented.</p>
 <section class="footnotes" role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1" role="doc-endnote"><p>Another one my dudes. This time it is very longgg. Yepp. So long, pop! I’m off to check my tiger trap! I rigged a tuna fish sandwich yesterday, so I’m sure to have a tiger by now!<a href="#fnref1" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn1" role="doc-endnote"><p>Here is the footnote. It can go anywhere after the footnote reference. It need not be placed at the end of the document.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn2" role="doc-endnote"><p>Here’s the long note. This one contains multiple blocks.</p>
+<p>Subsequent blocks are indented to show that they belong to the footnote (as with list items).</p>
+<pre><code>  { &lt;code&gt; }</code></pre>
+<p>If you want, you can indent every line, but you can also be lazy and just indent the first line of each block.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn3" role="doc-endnote"><p>This is <em>easier</em> to type. Inline notes may contain <a href="http://google.com">links</a> and <code>]</code> verbatim characters, as well as [bracketed text].<a href="#fnref3" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn4" role="doc-endnote"><p>In quote.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn5" role="doc-endnote"><p>In list.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩</a></p></li>
 </ol>
 </section>
 </article>
